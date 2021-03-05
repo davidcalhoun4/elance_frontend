@@ -1,5 +1,5 @@
 <template>
-  <div class="dancer_signup">
+  <div class="employer-signup">
     <form v-on:submit.prevent="submit()">
       <h1>Signup</h1>
       <ul>
@@ -8,8 +8,8 @@
         </li>
       </ul>
       <div class="form-group">
-        <label>Name:</label>
-        <input type="text" class="form-control" v-model="name" />
+        <label>Company Name:</label>
+        <input type="text" class="form-control" v-model="company_name" />
       </div>
       <div class="form-group">
         <label>Email:</label>
@@ -38,7 +38,7 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      name: "",
+      company_name: "",
       email: "",
       password: "",
       passwordConfirmation: "",
@@ -48,13 +48,13 @@ export default {
   methods: {
     submit: function() {
       var params = {
-        name: this.name,
+        company_name: this.company_name,
         email: this.email,
         password: this.password,
         password_confirmation: this.passwordConfirmation,
       };
       axios
-        .post("/api/dancer/sessions", params)
+        .post("/api/employers", params)
         .then((response) => {
           console.log(response.data);
           this.$router.push("/login");

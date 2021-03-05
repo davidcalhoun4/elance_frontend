@@ -1,7 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Dancer_Signup from "../views/Dancer-Signup.vue";
+import DancersSignup from "../views/DancersSignup.vue";
+import EmployersSignup from "../views/EmployersSignup.vue";
+import DancersLogin from "../views/DancersLogin.vue";
+import EmployersLogin from "../views/EmployersLogin.vue";
+import Logout from "../views/Logout.vue";
+import DancersIndex from "../views/dancers/DancersIndex.vue"
 
 Vue.use(VueRouter);
 
@@ -21,9 +26,34 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue")
   },
   { 
-    path: "/dancer-signup", 
-    name: "dancer-signup", 
-    component: Dancer-Signup 
+    path: "/dancer/signup",
+    name: "dancer-signup",
+    component: DancersSignup 
+  },
+  { 
+    path: "/employer/signup",
+    name: "employer-signup",
+    component: EmployersSignup
+  },
+  { 
+    path: "/dancer/login", 
+    name: "dancer-login", 
+    component: DancersLogin 
+  },
+  { 
+    path: "/employer/login", 
+    name: "employer-login", 
+    component: EmployersLogin 
+  },
+  { 
+    path: "/logout", 
+    name: "logout", 
+    component: Logout 
+  },
+  {
+    path: "/dancers",
+    name: "dancer-index",
+    component: DancersIndex
   }
 ];
 
