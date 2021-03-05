@@ -7,6 +7,8 @@ import DancersLogin from "../views/DancersLogin.vue";
 import EmployersLogin from "../views/EmployersLogin.vue";
 import Logout from "../views/Logout.vue";
 import DancersIndex from "../views/dancers/DancersIndex.vue"
+import DancersShow from "../views/dancers/DancersShow.vue"
+import DancersEdit from "../views/dancers/DancersEdit.vue"
 
 Vue.use(VueRouter);
 
@@ -25,35 +27,45 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
   },
-  { 
+  {
     path: "/dancer/signup",
     name: "dancer-signup",
-    component: DancersSignup 
+    component: DancersSignup
   },
-  { 
+  {
     path: "/employer/signup",
     name: "employer-signup",
     component: EmployersSignup
   },
-  { 
-    path: "/dancer/login", 
-    name: "dancer-login", 
-    component: DancersLogin 
+  {
+    path: "/dancer/login",
+    name: "dancer-login",
+    component: DancersLogin
   },
-  { 
-    path: "/employer/login", 
-    name: "employer-login", 
-    component: EmployersLogin 
+  {
+    path: "/employer/login",
+    name: "employer-login",
+    component: EmployersLogin
   },
-  { 
-    path: "/logout", 
-    name: "logout", 
-    component: Logout 
+  {
+    path: "/logout",
+    name: "logout",
+    component: Logout
   },
   {
     path: "/dancers",
     name: "dancer-index",
     component: DancersIndex
+  },
+  {
+    path: "/dancers/:id",
+    name: "dancers-show",
+    component: DancersShow
+  },
+  {
+    path: "/dancers/:id/edit",
+    name: "dancers-edit",
+    component: DancersEdit
   }
 ];
 

@@ -1,14 +1,24 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/dancers">Dancer Index</router-link> |
-      <router-link to="/dancer/signup">Dancer Signup</router-link> |
-      <router-link to="/dancer/login">Dancer Login</router-link> |
-      <router-link to="/employer/signup">Employer Signup</router-link> |
-      <router-link to="/employer/login">Employer Login</router-link> |
-      <router-link to="/logout">Logout</router-link>
+      <router-link to="/">Home | </router-link>
+      <!-- <router-link to="/about">About | </router-link> -->
+      <router-link v-if="isLoggedIn()" to="/dancers"
+        >Dancer Index |
+      </router-link>
+      <router-link v-if="!isLoggedIn()" to="/dancer/signup"
+        >Dancer Signup |
+      </router-link>
+      <router-link v-if="!isLoggedIn()" to="/dancer/login"
+        >Dancer Login |
+      </router-link>
+      <router-link v-if="!isLoggedIn()" to="/employer/signup"
+        >Employer Signup |
+      </router-link>
+      <router-link v-if="!isLoggedIn()" to="/employer/login"
+        >Employer Login |
+      </router-link>
+      <router-link v-if="isLoggedIn()" to="/logout">Logout</router-link>
     </div>
     <router-view />
   </div>
@@ -36,3 +46,16 @@
   color: #42b983;
 }
 </style>
+
+<script>
+export default {
+  methods: {
+    isLoggedIn: function() {
+      return localStorage.jwt;
+    },
+    getDancerId: function() {
+      return localStorage.dancer_id;
+    },
+  },
+};
+</script>

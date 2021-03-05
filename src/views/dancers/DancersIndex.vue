@@ -2,8 +2,10 @@
   <div class="dancer-index">
     <h1>Dancers</h1>
     <div v-for="dancer in dancers" v-bind:key="dancer">
-      <h2>{{ dancer.first_name }} {{ dancer.last_name }}</h2>
-      <!-- <img v-bind:src=".url" v-bind:alt="" /> -->
+      <router-link :to="`/dancers/${dancer.id}`">
+        <h2>{{ dancer.first_name }} {{ dancer.last_name }}</h2>
+        <img v-bind:src="dancer.image_url" alt="" />
+      </router-link>
     </div>
   </div>
 </template>
