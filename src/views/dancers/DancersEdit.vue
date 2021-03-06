@@ -28,6 +28,7 @@
 
       <input type="submit" value="Update Dancer" />
     </form>
+    <button v-on:click="destroyDancer()">Destroy</button>
   </div>
 </template>
 
@@ -70,6 +71,15 @@ export default {
           console.log("dancer update error", error.response);
           this.errors = error.response.data.errors;
         });
+    },
+    destroyDancer: function() {
+      if (confirm("Are you 100% certain you want to delete this dancer?")) {
+        axios.delete(`/api/dancers/${this.dancer.id}`).then((response) => {
+          console.log(response.data);
+          console.log("dancer deleted");
+          this.$router.push("/dancers");
+        });
+      }
     },
   },
 };

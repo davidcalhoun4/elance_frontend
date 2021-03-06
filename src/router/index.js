@@ -6,9 +6,15 @@ import EmployersSignup from "../views/EmployersSignup.vue";
 import DancersLogin from "../views/DancersLogin.vue";
 import EmployersLogin from "../views/EmployersLogin.vue";
 import Logout from "../views/Logout.vue";
+
 import DancersIndex from "../views/dancers/DancersIndex.vue"
 import DancersShow from "../views/dancers/DancersShow.vue"
 import DancersEdit from "../views/dancers/DancersEdit.vue"
+
+import PostsIndex from "../views/posts/PostsIndex.vue"
+import PostsShow from "../views/posts/PostsShow.vue"
+import PostsEdit from "../views/posts/PostsEdit.vue"
+import PostsNew from "../views/posts/PostsNew.vue"
 
 Vue.use(VueRouter);
 
@@ -66,6 +72,26 @@ const routes = [
     path: "/dancers/:id/edit",
     name: "dancers-edit",
     component: DancersEdit
+  },
+  {
+    path: "/posts",
+    name: "posts-index",
+    component: PostsIndex
+  },
+  {
+    path: "/posts/:id",
+    name: "posts-show",
+    component: PostsShow
+  },
+  {
+    path: "/posts/:id/edit",
+    name: "posts-edit",
+    component: PostsEdit
+  },
+  {
+    path: "/posts/new",
+    name: "posts-new",
+    component: PostsNew
   }
 ];
 
