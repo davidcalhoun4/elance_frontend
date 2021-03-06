@@ -58,6 +58,9 @@ export default {
     getDancerId: function() {
       return localStorage.dancer_id;
     },
+    getEmployerId: function() {
+      return localStorage.employer_id;
+    },
   },
 };
 </script>

@@ -4,11 +4,17 @@
       <u>{{ post.title }}</u>
     </h1>
     <img v-bind:src="post.image_url" alt="" />
-    <h3><u>Employer</u>: {{ post.employer_id }}</h3>
+    <router-link v-bind:to="`/employers/${employer.id}`">
+      <h3><u>Employer</u>: {{ post.employer_id }}</h3>
+    </router-link>
     <h3>{{ post.description }}</h3>
-    <router-link v-bind:to="`/posts/${post.id}/edit`">Edit Post</router-link>
+    <div v-if="post.employer_id == $parent.getEmployerId()">
+      <router-link v-bind:to="`/posts/${post.id}/edit`"
+        ><button>Edit Post</button></router-link
+      >
+    </div>
     <br />
-    <router-link to="/posts"><b>Back to all posts</b></router-link>
+    <router-link to="/posts"><button>Back to all posts</button></router-link>
   </div>
 </template>
 
@@ -18,6 +24,7 @@ export default {
   data: function() {
     return {
       post: {},
+      employer: [],
     };
   },
   created: function() {

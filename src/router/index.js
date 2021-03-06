@@ -16,6 +16,8 @@ import PostsShow from "../views/posts/PostsShow.vue"
 import PostsEdit from "../views/posts/PostsEdit.vue"
 import PostsNew from "../views/posts/PostsNew.vue"
 
+import EmployersShow from "../views/employers/EmployersShow.vue"
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -92,6 +94,11 @@ const routes = [
     path: "/posts/new",
     name: "posts-new",
     component: PostsNew
+  },
+  {
+    path: "/employers/:id",
+    name: "employers-show",
+    component: EmployersShow
   }
 ];
 

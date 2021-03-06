@@ -6,9 +6,11 @@
     <h3><u>Resume</u>: {{ dancer.resume }}</h3>
     <h3><u>Dance Reel</u>: {{ dancer.video }}</h3>
     <h3><u>Style</u>: {{ dancer.genre }}</h3>
-    <router-link v-bind:to="`/dancers/${dancer.id}/edit`"
-      >Edit Dancer</router-link
-    >
+    <div v-if="dancer.id == $parent.getDancerId()">
+      <router-link v-bind:to="`/dancers/${dancer.id}/edit`"
+        >Edit Dancer</router-link
+      >
+    </div>
     <br />
     <router-link to="/dancers"><b>Back to all dancers</b></router-link>
   </div>
