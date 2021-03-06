@@ -4,7 +4,7 @@
       <u>{{ post.title }}</u>
     </h1>
     <img v-bind:src="post.image_url" alt="" />
-    <router-link v-bind:to="`/employers/${employer.id}`">
+    <router-link v-bind:to="`/employers/${post.employer_id}`">
       <h3><u>Employer</u>: {{ post.employer_id }}</h3>
     </router-link>
     <h3>{{ post.description }}</h3>
@@ -24,7 +24,7 @@ export default {
   data: function() {
     return {
       post: {},
-      employer: [],
+      employer: {},
     };
   },
   created: function() {
