@@ -3,10 +3,11 @@
     <h1>
       <u>{{ post.title }}</u>
     </h1>
-    <img v-bind:src="post.image_url" alt="" />
+
     <router-link v-bind:to="`/employers/${post.employer_id}`">
-      <h3><u>Employer</u>: {{ post.employer_id }}</h3>
+      <h2><u>Employer</u>: {{ post.employer.company_name }}</h2>
     </router-link>
+    <img v-bind:src="post.image_url" alt="" />
     <h3>{{ post.description }}</h3>
     <div v-if="post.employer_id == $parent.getEmployerId()">
       <router-link v-bind:to="`/posts/${post.id}/edit`"
