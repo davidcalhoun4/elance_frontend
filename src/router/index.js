@@ -7,16 +7,16 @@ import DancersLogin from "../views/DancersLogin.vue";
 import EmployersLogin from "../views/EmployersLogin.vue";
 import Logout from "../views/Logout.vue";
 
-import DancersIndex from "../views/dancers/DancersIndex.vue"
-import DancersShow from "../views/dancers/DancersShow.vue"
-import DancersEdit from "../views/dancers/DancersEdit.vue"
+import DancersIndex from "../views/dancers/DancersIndex.vue";
+import DancersShow from "../views/dancers/DancersShow.vue";
+import DancersEdit from "../views/dancers/DancersEdit.vue";
 
-import PostsIndex from "../views/posts/PostsIndex.vue"
-import PostsShow from "../views/posts/PostsShow.vue"
-import PostsEdit from "../views/posts/PostsEdit.vue"
-import PostsNew from "../views/posts/PostsNew.vue"
+import PostsIndex from "../views/posts/PostsIndex.vue";
+import PostsShow from "../views/posts/PostsShow.vue";
+import PostsEdit from "../views/posts/PostsEdit.vue";
+import PostsNew from "../views/posts/PostsNew.vue";
 
-import EmployersShow from "../views/employers/EmployersShow.vue"
+import EmployersShow from "../views/employers/EmployersShow.vue";
 
 Vue.use(VueRouter);
 

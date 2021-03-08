@@ -25,7 +25,6 @@ export default {
   data: function() {
     return {
       post: {},
-      employer: {},
     };
   },
   created: function() {

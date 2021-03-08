@@ -15,7 +15,7 @@
       Genre:
       <input type="text" v-model="genre_id" /><br />
 
-      <input type="submit" value="Update Post" />
+      <input type="submit" value="Create Post" />
     </form>
   </div>
 </template>
@@ -31,6 +31,7 @@ export default {
       genre_id: "",
       employer_id: "",
       errors: [],
+      status: "",
     };
   },
   created: function() {},
@@ -41,7 +42,7 @@ export default {
         description: this.description,
         image: this.image_url,
         genre: this.genre_id,
-        employer_id: this.employer_id,
+        employer_id: localStorage.employer_id,
       };
       axios
         .post("/api/posts", params)
