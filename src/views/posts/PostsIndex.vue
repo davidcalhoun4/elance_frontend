@@ -4,8 +4,8 @@
     <div v-for="post in posts" v-bind:key="post.id">
       <router-link :to="`/posts/${post.id}`">
         <h2>Title: {{ post.title }}</h2>
-        <h3>Employer: {{ post.employer_id }}</h3>
-        <p>Dance Genre: {{ post.genre }}</p>
+        <h3>Employer: {{ post.employer.company_name }}</h3>
+        <p>Dance Genre: {{ post.genre.style }}</p>
 
         <img v-bind:src="post.image_url" alt="" />
         <h1>______________________________________________</h1>
