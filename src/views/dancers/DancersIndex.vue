@@ -1,5 +1,5 @@
 <template>
-  <div class="dancer-index">
+  <div class="dancers-index">
     <h1>Dancers</h1>
     <div v-for="dancer in dancers" v-bind:key="dancer.id">
       <router-link :to="`/dancers/${dancer.id}`">

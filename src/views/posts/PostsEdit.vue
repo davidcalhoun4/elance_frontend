@@ -41,7 +41,7 @@ export default {
         title: post.title,
         description: post.description,
         image: post.image_url,
-        genre: post.genre_id,
+        genre_id: post.genre_id,
       };
       axios
         .patch(`/api/posts/${this.post.id}`, params)

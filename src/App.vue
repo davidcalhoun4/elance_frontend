@@ -4,7 +4,9 @@
       <router-link to="/">Home | </router-link>
       <!-- <router-link to="/about">About | </router-link> -->
       <router-link v-if="isLoggedIn()" to="/dancers"
-        >Dancer Index |
+        >Dancer Index | </router-link
+      ><router-link v-if="isLoggedIn()" to="/dancers/new"
+        >Dancer New |
       </router-link>
       <router-link v-if="isLoggedIn()" to="/posts">Post Index | </router-link>
       <router-link v-if="isLoggedIn()" to="/posts/new">Post New | </router-link>

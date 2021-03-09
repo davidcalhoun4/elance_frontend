@@ -14,7 +14,8 @@
       <input type="text" v-model="image_url" /><br />
       Genre:
       <input type="text" v-model="genre_id" /><br />
-
+      Employer:
+      <input type="text" v-model="employer_id" /><br />
       <input type="submit" value="Create Post" />
     </form>
   </div>
@@ -41,8 +42,8 @@ export default {
         title: this.title,
         description: this.description,
         image: this.image_url,
-        genre: this.genre_id,
-        employer_id: localStorage.employer_id,
+        genre_id: this.genre_id,
+        employer_id: this.employer_id,
       };
       axios
         .post("/api/posts", params)

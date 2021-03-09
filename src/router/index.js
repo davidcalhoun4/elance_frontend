@@ -10,6 +10,7 @@ import Logout from "../views/Logout.vue";
 import DancersIndex from "../views/dancers/DancersIndex.vue";
 import DancersShow from "../views/dancers/DancersShow.vue";
 import DancersEdit from "../views/dancers/DancersEdit.vue";
+import DancersNew from "../views/dancers/DancersNew.vue";
 
 import PostsIndex from "../views/posts/PostsIndex.vue";
 import PostsShow from "../views/posts/PostsShow.vue";
@@ -17,6 +18,7 @@ import PostsEdit from "../views/posts/PostsEdit.vue";
 import PostsNew from "../views/posts/PostsNew.vue";
 
 import EmployersShow from "../views/employers/EmployersShow.vue";
+import EmployersEdit from "../views/employers/EmployersEdit";
 
 Vue.use(VueRouter);
 
@@ -62,8 +64,13 @@ const routes = [
   },
   {
     path: "/dancers",
-    name: "dancer-index",
+    name: "dancers-index",
     component: DancersIndex
+  },
+  {
+    path: "/dancers/new",
+    name: "dancers-new",
+    component: DancersNew
   },
   {
     path: "/dancers/:id",
@@ -81,6 +88,11 @@ const routes = [
     component: PostsIndex
   },
   {
+    path: "/posts/new",
+    name: "posts-new",
+    component: PostsNew
+  },
+  {
     path: "/posts/:id",
     name: "posts-show",
     component: PostsShow
@@ -91,14 +103,14 @@ const routes = [
     component: PostsEdit
   },
   {
-    path: "/posts/new",
-    name: "posts-new",
-    component: PostsNew
-  },
-  {
     path: "/employers/:id",
     name: "employers-show",
     component: EmployersShow
+  },
+  {
+    path: "/employers/:id/edit",
+    name: "employers-edit",
+    component: EmployersEdit
   }
 ];
 
