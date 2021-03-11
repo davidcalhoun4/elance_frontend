@@ -12,8 +12,18 @@
       <input type="text" v-model="description" /><br />
       Image:
       <input type="text" v-model="image_url" /><br />
-      Genre:
-      <input type="text" v-model="genre_id" /><br />
+
+      <label for="genre-id">Choose a Genre:</label>
+      <select name="genres" v-model="genreId">
+        <option value="1">Ballet</option>
+        <option value="2">Modern</option>
+        <option value="3">Contemporary</option>
+        <option value="4">Tap</option>
+        <option value="2">Hip-Hop</option>
+      </select>
+      <br />
+      <!-- Genre:
+      <input type="text" v-model="genre_id" /><br /> -->
 
       <input type="submit" value="Create Post" />
     </form>
@@ -28,7 +38,7 @@ export default {
       title: "",
       description: "",
       image_url: "",
-      genre_id: "",
+      genreId: "",
       employer_id: "",
       errors: [],
       status: "",
@@ -41,7 +51,7 @@ export default {
         title: this.title,
         description: this.description,
         image: this.image_url,
-        genre_id: this.genre_id,
+        genre_id: this.genreId,
         employer_id: this.employer_id,
       };
       axios

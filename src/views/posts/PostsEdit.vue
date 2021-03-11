@@ -11,8 +11,16 @@
       <input type="text" v-model="post.description" /><br />
       Image:
       <input type="text" v-model="post.image_url" /><br />
-      Genre:
-      <input type="text" v-model="post.genre_id" /><br />
+
+      <label for="genre-id">Choose a Genre:</label>
+      <select name="genres" v-model="post.genre_id">
+        <option value="1">Ballet</option>
+        <option value="2">Modern</option>
+        <option value="3">Contemporary</option>
+        <option value="4">Tap</option>
+        <option value="2">Hip-Hop</option>
+      </select>
+      <br />
 
       <input type="submit" value="Update Post" />
     </form>
@@ -36,12 +44,12 @@ export default {
     });
   },
   methods: {
-    updatePost: function(post) {
+    updatePost: function() {
       var params = {
-        title: post.title,
-        description: post.description,
-        image: post.image_url,
-        genre_id: post.genre_id,
+        title: this.post.title,
+        description: this.post.description,
+        image: this.post.image_url,
+        genre_id: this.post.genre_id,
       };
       axios
         .patch(`/api/posts/${this.post.id}`, params)

@@ -15,8 +15,16 @@
       <input type="text" v-model="dancer.resume" /><br />
       Video:
       <input type="text" v-model="dancer.video" /><br />
-      Genre:
-      <input type="text" v-model="dancer.genre" /><br />
+
+      <label for="genre-id">Choose a Genre:</label>
+      <select name="genre" v-model="genre_id">
+        <option value="1">Ballet</option>
+        <option value="2">Modern</option>
+        <option value="3">Contemporary</option>
+        <option value="4">Tap</option>
+        <option value="2">Hip-Hop</option>
+      </select>
+      <br />
       Image:
       <input type="text" v-model="dancer.image_url" /><br />
       Email:
