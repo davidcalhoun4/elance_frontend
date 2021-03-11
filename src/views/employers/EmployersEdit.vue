@@ -18,7 +18,7 @@
       Password Confirmation:
       <input type="text" v-model="employer.password_confirmation" /><br />
 
-      <input type="submit" value="Update Employer" />
+      <input type="submit" value="Submit" />
     </form>
     <button v-on:click="destroyEmployer()">Destroy</button>
   </div>

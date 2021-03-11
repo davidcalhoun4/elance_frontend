@@ -1,24 +1,24 @@
 <template>
   <div class="dancer-signup">
     <form v-on:submit.prevent="submit()">
-      <h1>Signup</h1>
+      <h1>Dancer Signup</h1>
       <ul>
         <li class="text-danger" v-for="error in errors" v-bind:key="error">
           {{ error }}
         </li>
       </ul>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label>First Name:</label>
         <input type="text" class="form-control" v-model="first_name" />
-      </div>
-      <div class="form-group">
+      </div> -->
+      <!-- <div class="form-group">
         <label>Genre:</label>
         <input type="text" class="form-control" v-model="genre_id" />
       </div>
       <div class="form-group">
         <label>Last Name:</label>
         <input type="text" class="form-control" v-model="last_name" />
-      </div>
+      </div> -->
       <div class="form-group">
         <label>Email:</label>
         <input type="email" class="form-control" v-model="email" />
@@ -46,24 +46,24 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      first_name: "",
-      last_name: "",
+      // first_name: "",
+      // last_name: "",
+      // genre_id: "",
       email: "",
       password: "",
       passwordConfirmation: "",
-      genre_id: "",
       errors: [],
     };
   },
   methods: {
     submit: function() {
       var params = {
-        first_name: this.first_name,
-        last_name: this.last_name,
+        // first_name: this.first_name,
+        // last_name: this.last_name,
         email: this.email,
         password: this.password,
         password_confirmation: this.passwordConfirmation,
-        genre_id: this.genre_id,
+        // genre_id: this.genre_id,
       };
       axios
         .post("/api/dancers", params)

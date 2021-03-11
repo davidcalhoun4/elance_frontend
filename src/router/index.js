@@ -10,7 +10,7 @@ import Logout from "../views/Logout.vue";
 import DancersIndex from "../views/dancers/DancersIndex.vue";
 import DancersShow from "../views/dancers/DancersShow.vue";
 import DancersEdit from "../views/dancers/DancersEdit.vue";
-import DancersNew from "../views/dancers/DancersNew.vue";
+
 
 import PostsIndex from "../views/posts/PostsIndex.vue";
 import PostsShow from "../views/posts/PostsShow.vue";
@@ -66,11 +66,6 @@ const routes = [
     path: "/dancers",
     name: "dancers-index",
     component: DancersIndex
-  },
-  {
-    path: "/dancers/new",
-    name: "dancers-new",
-    component: DancersNew
   },
   {
     path: "/dancers/:id",

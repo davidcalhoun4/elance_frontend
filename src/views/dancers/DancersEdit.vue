@@ -26,7 +26,7 @@
       Password Confirmation:
       <input type="text" v-model="dancer.password_confirmation" /><br />
 
-      <input type="submit" value="Update Dancer" />
+      <input type="submit" value="Submit" />
     </form>
     <button v-on:click="destroyDancer()">Destroy</button>
   </div>
@@ -77,6 +77,7 @@ export default {
         axios.delete(`/api/dancers/${this.dancer.id}`).then((response) => {
           console.log(response.data);
           console.log("dancer deleted");
+          localStorage.removeItem("dancer_id");
           this.$router.push("/dancers");
         });
       }

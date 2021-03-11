@@ -10,6 +10,7 @@
     <p>Dance Genre: {{ post.genre.style }}</p>
     <img v-bind:src="post.image_url" alt="" />
     <h3>Description: {{ post.description }}</h3>
+    <p>Created: {{ post.created }}</p>
     <div v-if="post.employer_id == $parent.getEmployerId()">
       <router-link v-bind:to="`/posts/${post.id}/edit`"
         ><button>Edit Post</button></router-link
