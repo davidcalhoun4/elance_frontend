@@ -18,7 +18,7 @@
         <option value="2">Modern</option>
         <option value="3">Contemporary</option>
         <option value="4">Tap</option>
-        <option value="2">Hip-Hop</option>
+        <option value="5">Hip-Hop</option>
       </select>
       <br />
 

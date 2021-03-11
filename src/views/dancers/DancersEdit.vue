@@ -17,12 +17,12 @@
       <input type="text" v-model="dancer.video" /><br />
 
       <label for="genre-id">Choose a Genre:</label>
-      <select name="genre" v-model="genre_id">
+      <select name="genre" v-model="dancer.genre_id">
         <option value="1">Ballet</option>
         <option value="2">Modern</option>
         <option value="3">Contemporary</option>
         <option value="4">Tap</option>
-        <option value="2">Hip-Hop</option>
+        <option value="5">Hip-Hop</option>
       </select>
       <br />
       Image:
@@ -67,7 +67,7 @@ export default {
         resume: dancer.resume,
         about: dancer.about,
         video: dancer.video,
-        genre: dancer.genre_id,
+        genre_id: dancer.genre_id,
       };
       axios
         .patch(`/api/dancers/${this.dancer.id}`, params)
