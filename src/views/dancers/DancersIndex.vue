@@ -4,7 +4,7 @@
     <div v-for="dancer in dancers" v-bind:key="dancer.id">
       <router-link :to="`/dancers/${dancer.id}`">
         <h2>{{ dancer.first_name }} {{ dancer.last_name }}</h2>
-        <p>Dance Style:</p>
+        <p>Dance Style: {{ dancer.genre.style }}</p>
         <img v-bind:src="dancer.image_url" alt="" />
       </router-link>
     </div>

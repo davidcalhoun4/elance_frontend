@@ -9,8 +9,17 @@
       <input type="text" v-model="employer.company_name" /><br />
       Description:
       <input type="text" v-model="employer.description" /><br />
-      Employer Type:
-      <input type="text" v-model="employer.employer_type" /><br />
+      <!-- Employer Type:
+      <input type="text" v-model="employer.employer_type" /><br /> -->
+
+      <label for="employer-type">Employer Type:</label>
+      <select name="employer_type" v-model="employer.employer_type">
+        <option value="Company">Company</option>
+        <option value="Freelance Choreographer">Freelance Choreographer</option>
+        <option value="Evener Hirer">Event Hirer</option>
+      </select>
+      <br />
+
       Email:
       <input type="text" v-model="employer.email" /><br />
       Password:
