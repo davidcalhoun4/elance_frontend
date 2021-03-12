@@ -10,7 +10,7 @@
     <p>Dance Genre: {{ post.genre.style }}</p>
     <img v-bind:src="post.image_url" alt="" />
     <h3>Description: {{ post.description }}</h3>
-    <p>Created: {{ post.created }}</p>
+    <p>Posted: {{ formattedDate(post.created) }}</p>
     <div v-if="post.employer_id == $parent.getEmployerId()">
       <router-link v-bind:to="`/posts/${post.id}/edit`"
         ><button>Edit Post</button></router-link
@@ -23,6 +23,7 @@
 
 <script>
 import axios from "axios";
+import moment from "moment";
 export default {
   data: function() {
     return {
@@ -35,6 +36,10 @@ export default {
       this.post = response.data;
     });
   },
-  methods: {},
+  methods: {
+    formattedDate: function(date) {
+      return moment(date).format("MMM Do YY, h:mm:ss a");
+    },
+  },
 };
 </script>
