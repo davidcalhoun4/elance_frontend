@@ -63,6 +63,9 @@ export default {
     getEmployerId: function() {
       return localStorage.employer_id;
     },
+    employerLoggedIn: function() {
+      return localStorage.jwt;
+    },
   },
 };
 </script>

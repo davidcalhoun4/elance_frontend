@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     formattedDate: function(date) {
-      return moment(date).format("MMM Do YY, h:mm:ss a");
+      return moment(date).format("LL");
     },
   },
 };
