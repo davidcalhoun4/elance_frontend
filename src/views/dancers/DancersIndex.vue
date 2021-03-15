@@ -8,7 +8,7 @@
       <option>Contemporary</option>
       <option>Tap</option>
       <option>Hip-Hop</option>
-      <option>All Style</option>
+      <!-- <option>All Style</option> -->
     </select>
     <div
       v-for="dancer in filterBy(dancers, filter, 'genre')"
@@ -16,7 +16,6 @@
     >
       <router-link :to="`/dancers/${dancer.id}`">
         <h2>{{ dancer.first_name }} {{ dancer.last_name }}</h2>
-        <!-- <h3>{{ dancer.email }}</h3> -->
         <p v-if="dancer.genre">Dance Style: {{ dancer.genre.style }}</p>
         <img v-bind:src="dancer.image_url" alt="" />
       </router-link>

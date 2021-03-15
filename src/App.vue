@@ -7,8 +7,11 @@
         >Dancer Index |
       </router-link>
       <router-link v-if="isLoggedIn()" to="/posts">Post Index | </router-link>
+      <router-link v-if="isLoggedIn()" to="/employers"
+        >Employer Index |
+      </router-link>
       <router-link v-if="getEmployerId()" to="/posts/new">
-        New Post |
+        New Job Post |
       </router-link>
       <router-link v-if="!isLoggedIn()" to="/dancer/signup"
         >Dancer Signup |
@@ -63,10 +66,6 @@ export default {
     getEmployerId: function() {
       return localStorage.employer_id;
     },
-    // employerLoggedIn: function() {
-    //   if (localStorage.jwt.employer_id == localStorage.employer_id);
-    //   return localStorage.jwt;
-    // },
   },
 };
 </script>

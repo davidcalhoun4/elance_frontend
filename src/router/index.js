@@ -17,6 +17,8 @@ import PostsShow from "../views/posts/PostsShow.vue";
 import PostsEdit from "../views/posts/PostsEdit.vue";
 import PostsNew from "../views/posts/PostsNew.vue";
 
+
+import EmployersIndex from "../views/employers/EmployersIndex.vue";
 import EmployersShow from "../views/employers/EmployersShow.vue";
 import EmployersEdit from "../views/employers/EmployersEdit";
 
@@ -106,6 +108,11 @@ const routes = [
     path: "/employers/:id/edit",
     name: "employers-edit",
     component: EmployersEdit
+  },
+  {
+    path: "/employers",
+    name: "employers-index",
+    component: EmployersIndex
   }
 ];
 
