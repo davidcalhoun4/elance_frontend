@@ -63,7 +63,7 @@ export default {
         password_confirmation: dancer.password_confirmation,
         first_name: dancer.first_name,
         last_name: dancer.last_name,
-        image: dancer.image_url,
+        image_url: dancer.image_url,
         resume: dancer.resume,
         about: dancer.about,
         video: dancer.video,

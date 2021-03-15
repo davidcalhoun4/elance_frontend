@@ -48,7 +48,7 @@ export default {
       var params = {
         title: this.post.title,
         description: this.post.description,
-        image: this.post.image_url,
+        image_url: this.post.image_url,
         genre_id: this.post.genre_id,
       };
       axios

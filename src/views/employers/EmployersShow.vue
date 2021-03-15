@@ -16,6 +16,13 @@
       >
     </div>
     <br />
+    <h2><u>Employers Postings</u></h2>
+    <div v-for="post in employer.posts" v-bind:key="post">
+      <router-link :to="`/posts/${post.id}`">
+        <h3>Title: {{ post.title }}</h3>
+      </router-link>
+    </div>
+
     <router-link to="/employers"
       ><b><button>Back to all employers</button></b></router-link
     >
