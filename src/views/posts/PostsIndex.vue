@@ -1,7 +1,20 @@
 <template>
   <div class="posts-index">
     <h1>Posts</h1>
-    <div v-for="post in posts" v-bind:key="post.id">
+    <!-- <button v-on:click="filterBy = 'genre'" class="btn btn-secondary">
+      Sort By Genre
+    </button> -->
+    <!-- Search Post By Genre:
+    <input type="text" v-model="filter" /><br /> -->
+    <label for="genre-id">Search By Genre:</label>
+    <select name="genre" v-model="filter">
+      <option>Ballet</option>
+      <option>Modern</option>
+      <option>Contemporary</option>
+      <option>Tap</option>
+      <option>Hip-Hop</option>
+    </select>
+    <div v-for="post in filterBy(posts, filter, 'genre')" v-bind:key="post.id">
       <router-link :to="`/posts/${post.id}`">
         <h2>Title: {{ post.title }}</h2>
         <h3>Employer: {{ post.employer.company_name }}</h3>
@@ -16,10 +29,13 @@
 
 <script>
 import axios from "axios";
+import Vue2Filters from "vue2-filters";
 export default {
+  mixins: [Vue2Filters.mixin],
   data: function() {
     return {
       posts: [],
+      filter: "",
     };
   },
   created: function() {
