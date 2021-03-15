@@ -1,12 +1,18 @@
 <template>
   <div class="employers-index">
     <h1>Employers</h1>
-    <label for="employer-type">Search By Employer Type:</label>
+    Search Employers by Type:
+    <input
+      type="text"
+      v-model="filter"
+      placeholder="Company, Freelance Choreographer, Event Hirer"
+    />
+    <!-- <label for="employer-type">Search By Employer Type:</label>
     <select name="employer-type" v-model="filter">
       <option>Company</option>
       <option>Freelance Choreographer</option>
       <option>Event Hirer</option>
-    </select>
+    </select> -->
     <div
       v-for="employer in filterBy(employers, filter, 'employer_type')"
       v-bind:key="employer.id"

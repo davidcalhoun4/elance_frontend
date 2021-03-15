@@ -1,19 +1,19 @@
 <template>
   <div class="posts-index">
     <h1>Posts</h1>
-    <!-- <button v-on:click="filterBy = 'genre'" class="btn btn-secondary">
-      Sort By Genre
-    </button> -->
-    <!-- Search Post By Genre:
-    <input type="text" v-model="filter" /><br /> -->
     <label for="genre-id">Search By Genre:</label>
-    <select name="genre" v-model="filter">
+    <input
+      type="text"
+      v-model="filter"
+      placeholder="Ballet, Modern, Contemporary, Tap, Hip-Hop"
+    />
+    <!-- <select name="genre" v-model="filter" >
       <option>Ballet</option>
       <option>Modern</option>
       <option>Contemporary</option>
       <option>Tap</option>
       <option>Hip-Hop</option>
-    </select>
+    </select> -->
     <div v-for="post in filterBy(posts, filter, 'genre')" v-bind:key="post.id">
       <router-link :to="`/posts/${post.id}`">
         <h2>Title: {{ post.title }}</h2>

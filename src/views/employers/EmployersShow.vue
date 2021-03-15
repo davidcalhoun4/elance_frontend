@@ -6,12 +6,18 @@
     <p>Type: {{ employer.employer_type }}</p>
     <img v-bind:src="employer.image_url" alt="" />
     <h3>{{ employer.description }}</h3>
-    <router-link v-bind:to="`/employers/${employer.id}/edit`"
-      ><button>Edit Employer</button></router-link
+    <a v-bind:href="'mailto:' + employer.email">
+      <h4>Contact Employer:</h4>
+      {{ employer.email }}</a
     >
+    <div v-if="employer.id == $parent.getEmployerId()">
+      <router-link v-bind:to="`/employers/${employer.id}/edit`">
+        <button>Edit Employer</button></router-link
+      >
+    </div>
     <br />
-    <router-link to="/posts"
-      ><b><button>Back to all posts</button></b></router-link
+    <router-link to="/employers"
+      ><b><button>Back to all employers</button></b></router-link
     >
   </div>
 </template>
