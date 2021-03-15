@@ -6,11 +6,14 @@
     <h3><u>About</u>: {{ dancer.about }}</h3>
     <h3><u>Resume</u>: {{ dancer.resume }}</h3>
     <h3><u>Dance Reel</u>: {{ dancer.video }}</h3>
-    <h3>Contact Dancer: {{ dancer.email }}</h3>
+    <a v-bind:href="'mailto:' + dancer.email">
+      <h4>Contact Dancer:</h4>
+      {{ dancer.email }}</a
+    >
 
     <div v-if="dancer.id == $parent.getDancerId()">
       <router-link v-bind:to="`/dancers/${dancer.id}/edit`"
-        >Edit Dancer</router-link
+        >Edit Profile</router-link
       >
     </div>
     <br />

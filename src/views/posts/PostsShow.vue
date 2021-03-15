@@ -11,6 +11,10 @@
     <img v-bind:src="post.image_url" alt="" />
     <h3>Description: {{ post.description }}</h3>
     <p>Posted: {{ formattedDate(post.created) }}</p>
+    <a v-bind:href="'mailto:' + post.employer.email">
+      <h4>Contact Poster:</h4>
+      {{ post.employer.email }}</a
+    >
     <div v-if="post.employer_id == $parent.getEmployerId()">
       <router-link v-bind:to="`/posts/${post.id}/edit`"
         ><button>Edit Post</button></router-link
