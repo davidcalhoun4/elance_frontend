@@ -1,12 +1,8 @@
 <template>
   <div class="dancers-index">
     <h1>Dancers</h1>
-    Search Dancers by Genre:
-    <input
-      type="text"
-      v-model="filter"
-      placeholder="Ballet, Modern, Contemporary, Tap, Hip-Hop"
-    />
+    Search Dancers by Genre Or Name:
+    <input type="text" v-model="filter" placeholder="i.e. Ballet or Jaime" />
     <!-- <label for="genre-id">Search By Genre:</label>
     <select name="genre" v-model="filter">
       <option>Ballet</option>
@@ -16,7 +12,7 @@
       <option>Hip-Hop</option>
     </select> -->
     <div
-      v-for="dancer in filterBy(dancers, filter, 'genre')"
+      v-for="dancer in filterBy(dancers, filter, 'genre', 'first_name')"
       v-bind:key="dancer.id"
     >
       <router-link :to="`/dancers/${dancer.id}`">
