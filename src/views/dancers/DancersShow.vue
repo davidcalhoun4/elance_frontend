@@ -6,16 +6,18 @@
     <h3><u>About</u>: {{ dancer.about }}</h3>
 
     <h3><u>Resume</u>: {{ dancer.resume }}</h3>
-    <a v-bind:href="dancer.video"><h3>Dance Reel</h3></a>
-    <!-- <iframe
-      v-if="dancer.video"
+    <iframe
+      v-if="dancer.youtube_embed"
       width="560"
       height="315"
-      src="https://www.youtube.com/embed/mlCalvvrRU8"
+      :src="dancer.youtube_embed"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
-    ></iframe> -->
+    ></iframe>
+    <br />
+    <br />
+
     <a v-bind:href="'mailto:' + dancer.email">
       <button>
         <h4>Contact Dancer</h4>
