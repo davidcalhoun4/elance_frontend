@@ -45,7 +45,7 @@ export default {
           localStorage.setItem("jwt", response.data.jwt);
           localStorage.setItem("dancer_id", response.data.dancer_id);
           console.log("dancer has logged in");
-          this.$router.push("/");
+          this.$router.push(`/dancers/${response.data.dancer_id}`);
         })
         .catch((error) => {
           console.log(error.response);

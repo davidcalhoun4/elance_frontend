@@ -7,9 +7,8 @@
     <img v-bind:src="employer.image_url" alt="" />
     <h3>{{ employer.description }}</h3>
     <a v-bind:href="'mailto:' + employer.email">
-      <h4>Contact Employer:</h4>
-      {{ employer.email }}</a
-    >
+      <h4><button>Contact Employer</button></h4>
+    </a>
     <div v-if="employer.id == $parent.getEmployerId()">
       <router-link v-bind:to="`/employers/${employer.id}/edit`">
         <button>Edit Employer</button></router-link

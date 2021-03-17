@@ -4,24 +4,40 @@
     <h3><u>Genre</u>: {{ dancer.genre.style }}</h3>
     <img v-bind:src="dancer.image_url" alt="" />
     <h3><u>About</u>: {{ dancer.about }}</h3>
+
     <h3><u>Resume</u>: {{ dancer.resume }}</h3>
     <a v-bind:href="dancer.video"><h3>Dance Reel</h3></a>
+    <!-- <iframe
+      v-if="dancer.video"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/mlCalvvrRU8"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe> -->
     <a v-bind:href="'mailto:' + dancer.email">
-      <h4>Contact Dancer:</h4>
-      {{ dancer.email }}</a
+      <button>
+        <h4>Contact Dancer</h4>
+        <!-- {{ dancer.email }} -->
+      </button></a
     >
     <div v-if="dancer.id == $parent.getDancerId()">
       <router-link v-bind:to="`/dancers/${dancer.id}/edit`"
-        >Edit Profile</router-link
+        ><button>Edit Profile</button></router-link
       >
     </div>
     <br />
-    <router-link to="/dancers"><b>Back to all dancers</b></router-link>
+    <br />
+    <router-link to="/dancers"
+      ><b><button>Back to all dancers</button></b></router-link
+    >
   </div>
 </template>
 
 <script>
 import axios from "axios";
+
 export default {
   data: function() {
     return {

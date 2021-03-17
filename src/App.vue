@@ -6,7 +6,9 @@
       <router-link v-if="isLoggedIn()" to="/dancers"
         >Dancer Index |
       </router-link>
-      <router-link v-if="isLoggedIn()" to="/posts">Post Index | </router-link>
+      <router-link v-if="isLoggedIn()" to="/posts"
+        >Job Postings Index |
+      </router-link>
       <router-link v-if="isLoggedIn()" to="/employers"
         >Employer Index |
       </router-link>

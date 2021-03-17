@@ -45,7 +45,7 @@ export default {
           localStorage.setItem("jwt", response.data.jwt);
           localStorage.setItem("employer_id", response.data.employer_id);
           console.log("employer has logged in");
-          this.$router.push("/");
+          this.$router.push(`/employers/${response.data.employer_id}`);
         })
         .catch((error) => {
           console.log(error.response);

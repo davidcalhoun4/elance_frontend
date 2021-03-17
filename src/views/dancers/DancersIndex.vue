@@ -2,7 +2,7 @@
   <div class="dancers-index">
     <h1>Dancers</h1>
     Search Dancers by Genre Or Name:
-    <input type="text" v-model="filter" placeholder="i.e. Ballet or Jaime" />
+    <input type="text" v-model="filter" placeholder="i.e. Ballet or Colin" />
     <!-- <label for="genre-id">Search By Genre:</label>
     <select name="genre" v-model="filter">
       <option>Ballet</option>
