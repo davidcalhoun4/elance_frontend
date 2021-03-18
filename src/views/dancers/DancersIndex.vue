@@ -3,14 +3,6 @@
     <h1>Dancers</h1>
     Search Dancers by Genre Or Name:
     <input type="text" v-model="filter" placeholder="i.e. Ballet or Colin" />
-    <!-- <label for="genre-id">Search By Genre:</label>
-    <select name="genre" v-model="filter">
-      <option>Ballet</option>
-      <option>Modern</option>
-      <option>Contemporary</option>
-      <option>Tap</option>
-      <option>Hip-Hop</option>
-    </select> -->
     <div
       v-for="dancer in filterBy(dancers, filter, 'genre', 'first_name')"
       v-bind:key="dancer.id"

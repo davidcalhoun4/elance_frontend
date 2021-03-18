@@ -5,7 +5,8 @@
     <img v-bind:src="dancer.image_url" alt="" />
     <h3><u>About</u>: {{ dancer.about }}</h3>
 
-    <h3><u>Resume</u>: {{ dancer.resume }}</h3>
+    <a :href="dancer.resume">Dancer Resume</a>
+    <br />
     <iframe
       v-if="dancer.youtube_embed"
       width="560"

@@ -8,8 +8,14 @@
 
       Title:
       <input type="text" v-model="title" /><br />
+      <!-- <small>* required</small>
+      <br /> -->
       Description:
       <input type="text" v-model="description" /><br />
+      <small v-if="description.length < 20">
+        {{ 20 - description.length }} characters minimum</small
+      >
+      <br />
       Image:
       <input type="text" v-model="image_url" /><br />
 
