@@ -23,7 +23,7 @@
 
       <label for="genre-id">Choose a Genre:</label>
       <select value="1" name="genre" v-model="dancer.genre_id">
-        <option value="1">Ballet</option>
+        <option value="1" selected>Ballet</option>
         <option value="2">Modern</option>
         <option value="3">Contemporary</option>
         <option value="4">Tap</option>
@@ -52,6 +52,7 @@ export default {
     return {
       dancer: {
         email: "",
+        genre_id: "",
       },
       errors: [],
       resumeFile: "",

@@ -1,7 +1,7 @@
 <template>
   <div class="dancers-show">
     <h1>{{ dancer.first_name }} {{ dancer.last_name }}</h1>
-    <h3><u>Genre</u>: {{ dancer.genre.style }}</h3>
+    <h3 v-if="dancer.genre"><u>Genre</u>: {{ dancer.genre.style }}</h3>
     <img v-bind:src="dancer.image_url" alt="" />
     <h3><u>About</u>: {{ dancer.about }}</h3>
 
