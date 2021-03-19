@@ -74,6 +74,8 @@ export default {
         axios.delete(`/api/employers/${this.employer.id}`).then((response) => {
           console.log(response.data);
           console.log("employer deleted");
+          localStorage.removeItem("employer_id");
+          localStorage.removeItem("jwt");
           this.$router.push("/");
         });
       }

@@ -2,7 +2,12 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home | </router-link>
-      <!-- <router-link to="/about">About | </router-link> -->
+      <router-link v-if="getEmployerId()" :to="`/employers/${getEmployerId()}`"
+        >Profile |</router-link
+      >
+      <router-link v-if="getDancerId()" :to="`/dancers/${getDancerId()}`"
+        >Profile |</router-link
+      >
       <router-link v-if="isLoggedIn()" to="/dancers"
         >Dancer Index |
       </router-link>

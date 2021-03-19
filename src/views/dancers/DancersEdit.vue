@@ -118,7 +118,8 @@ export default {
           console.log(response.data);
           console.log("dancer deleted");
           localStorage.removeItem("dancer_id");
-          this.$router.push("/dancers");
+          localStorage.removeItem("jwt");
+          this.$router.push("/");
         });
       }
     },
