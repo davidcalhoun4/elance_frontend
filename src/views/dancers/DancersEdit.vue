@@ -75,11 +75,13 @@ export default {
     updateDancer: function() {
       var formData = new FormData();
       formData.append("email", this.dancer.email);
-      formData.append("password", this.dancer.password);
-      formData.append(
-        "password_confirmation",
-        this.dancer.password_confirmation
-      );
+      if (this.dancer.password) {
+        formData.append("password", this.dancer.password);
+        formData.append(
+          "password_confirmation",
+          this.dancer.password_confirmation
+        );
+      }
       formData.append("first_name", this.dancer.first_name);
       formData.append("last_name", this.dancer.last_name);
       formData.append("image_url", this.image_url);
