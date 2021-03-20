@@ -5,13 +5,11 @@
 			=============================== -->
     <section id="services-section">
       <div class="row margin-bottom-100">
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
           <img
             v-bind:src="employer.image_url"
             alt=""
             class="text-main margin-bottom-15"
-            width="310"
-            height="310"
           />
           <h2 class="text-main margin-bottom-15">
             {{ employer.company_name }}
@@ -27,7 +25,7 @@
         </div>
         <!-- /.col -->
 
-        <div class="col-md-6">
+        <div class="col-md-5 text-center">
           <!-- <p>Type: {{ employer.employer_type }}</p> -->
           <hr class="hr-short" />
           <p>
@@ -40,82 +38,30 @@
       <!-- /.row -->
 
       <!-- Begin info box wrap -->
-      <div class="info-box-wrap">
+      <div class="info-box-wrap text-center">
+        <h3>Employer's Posts:</h3>
         <div class="row">
-          <div class="col-lg-3 col-sm-6">
+          <div
+            v-for="post in employer.posts"
+            v-bind:key="post"
+            class="col-lg-3 col-sm-6"
+          >
             <!-- Begin info box 
 							* Use class "ib-bordered" for box border.
 							* Use class "ib-hover" for box hover effect.
 							-->
-            <div class="info-box ib-bordered ib-hover">
-              <span class="info-box-icon"
-                ><i class="fa fa-paint-brush"></i
-              ></span>
-              <h3 class="info-box-title">designing</h3>
-              <hr class="hr-short" />
-              <p class="info-box-text">
-                Cras faucibus nisi eu vehicula fermentum. Integer ultricies nisl
-                id enim varius, at pharetra.
-              </p>
-              <a href="#" class="btn btn-link btn-sm">read more...</a>
-            </div>
-            <!-- End infobox -->
-          </div>
-          <!-- /.col -->
+            <router-link :to="`/posts/${post.id}`">
+              <div class="info-box ib-bordered ib-hover">
+                <span class="info-box-icon"><i></i></span>
+                <h3 class="info-box-title">{{ post.title }}</h3>
+                <hr class="hr-short" />
+                <p class="info-box-text">
+                  {{ post.description }}
+                </p>
 
-          <div class="col-lg-3 col-sm-6">
-            <!-- Begin info box 
-							* Use class "ib-bordered" for box border.
-							* Use class "ib-hover" for box hover effect.
-							-->
-            <div class="info-box ib-bordered ib-hover">
-              <span class="info-box-icon"><i class="fa fa-code"></i></span>
-              <h3 class="info-box-title">developing</h3>
-              <hr class="hr-short" />
-              <p class="info-box-text">
-                Cras faucibus nisi eu vehicula fermentum. Integer ultricies nisl
-                id enim varius, at pharetra.
-              </p>
-              <a href="#" class="btn btn-link btn-sm">read more...</a>
-            </div>
-            <!-- End infobox -->
-          </div>
-          <!-- /.col -->
-
-          <div class="col-lg-3 col-sm-6">
-            <!-- Begin info box 
-							* Use class "ib-bordered" for box border.
-							* Use class "ib-hover" for box hover effect.
-							-->
-            <div class="info-box ib-bordered ib-hover">
-              <span class="info-box-icon"><i class="fa fa-globe"></i></span>
-              <h3 class="info-box-title">branding</h3>
-              <hr class="hr-short" />
-              <p class="info-box-text">
-                Cras faucibus nisi eu vehicula fermentum. Integer ultricies nisl
-                id enim varius, at pharetra.
-              </p>
-              <a href="#" class="btn btn-link btn-sm">read more...</a>
-            </div>
-            <!-- End infobox -->
-          </div>
-          <!-- /.col -->
-
-          <div class="col-lg-3 col-sm-6">
-            <!-- Begin info box 
-							* Use class "ib-bordered" for box border.
-							* Use class "ib-hover" for box hover effect.
-							-->
-            <div class="info-box ib-bordered ib-hover">
-              <span class="info-box-icon"><i class="fa fa-users"></i></span>
-              <h3 class="info-box-title">marketing</h3>
-              <hr class="hr-short" />
-              <p class="info-box-text">
-                Cras faucibus nisi eu vehicula fermentum. Integer ultricies nisl
-                id enim varius, at pharetra.
-              </p>
-              <a href="#" class="btn btn-link btn-sm">read more...</a>
-            </div>
+                <a href="#" class="btn btn-link btn-sm">see post</a>
+              </div>
+            </router-link>
             <!-- End infobox -->
           </div>
           <!-- /.col -->
@@ -123,12 +69,8 @@
         <!-- /.row -->
 
         <div class="row margin-top-100 margin-auto max-width-800">
-          <div class="col-md-12 text-center">
-            <p>
-              Duis mattis quam quis quam cursus, a rutrum ante luctus. Phasellus
-              porta ornare enim ac euismod. Nulla fringilla lectus ac tincidunt
-              viverra a accumsan <a href="#">sapien mollis</a>.
-            </p>
+          <div class="col-md-12 center">
+            <p></p>
           </div>
           <!-- /.col -->
         </div>
@@ -138,6 +80,7 @@
     </section>
     <!-- End services section -->
 
+    <!-- initial employer show display before Bootstrap
     <h1>
       <u>{{ employer.company_name }}</u>
     </h1>
@@ -163,6 +106,7 @@
     <router-link to="/employers"
       ><b><button>Back to all employers</button></b></router-link
     >
+    end initial employer show display before Bootstrap -->
   </div>
 </template>
 

@@ -6,7 +6,7 @@
     <section id="skills-section">
       <div class="section-inner no-padding bg-transparent max-width-1400">
         <div class="row">
-          <div class="col-md-6 margin-bottom-60">
+          <div class="col-md-6 margin-bottom-60 text-center">
             <p class="text-main margin-bottom-20">
               <img v-bind:src="dancer.image_url" alt="" />
             </p>
@@ -35,7 +35,7 @@
           </div>
           <!-- /.col -->
 
-          <div class="col-md-6">
+          <div class="col-md-6 text-center">
             <!-- Begin progress bar wrap -->
             <iframe
               v-if="dancer.youtube_embed"
@@ -112,6 +112,11 @@
     end of initial dancer show display before Bootstrap -->
   </div>
 </template>
+<style>
+img {
+  border-radius: 8px;
+}
+</style>
 
 <script>
 import axios from "axios";
