@@ -14,14 +14,24 @@
               {{ dancer.first_name }} {{ dancer.last_name }}
             </h2>
             <p>Genre: {{ dancer.genre.style }}</p>
-            <hr class="hr-short" />
-            <p></p>
-
+            <hr class="hr-short margin-bottom-10 " />
+            <br />
             <div v-if="dancer.id == $parent.getDancerId()">
               <router-link v-bind:to="`/dancers/${dancer.id}/edit`"
                 ><button>Edit Profile</button></router-link
               >
             </div>
+            <a
+              v-bind:href="'mailto:' + dancer.email"
+              class="btn btn-dark margin-top-15"
+              >Contact Dancer</a
+            >
+
+            <!-- <div v-if="dancer.id == $parent.getDancerId()">
+              <router-link v-bind:to="`/dancers/${dancer.id}/edit`"
+                ><button>Edit Profile</button></router-link
+              >
+            </div> -->
           </div>
           <!-- /.col -->
 
@@ -36,21 +46,24 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
-            <hr class="hr-short margin-top-15 margin-right-5" />
+
             <p class="margin-top-15 margin-right-5">
               <u v-if="dancer.about">About {{ dancer.first_name }}</u
               >: {{ dancer.about }}
             </p>
+            <hr class="hr-short margin-top-15 margin-right-5" />
+            <br />
             <a
               :href="dancer.resume"
               class="btn btn-primary margin-top-15 margin-right-5"
               >View PDF Resume</a
             >
-            <a
+
+            <!-- <a
               v-bind:href="'mailto:' + dancer.email"
               class="btn btn-dark margin-top-15"
               >Contact Dancer</a
-            >
+            > -->
           </div>
           <!-- /.col -->
         </div>
