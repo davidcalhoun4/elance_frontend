@@ -112,41 +112,35 @@
         <!-- /.header-inner -->
       </header>
       <!-- End header -->
-
-      <!-- <router-link to="/">Home | </router-link>
-      <router-link v-if="getEmployerId()" :to="`/employers/${getEmployerId()}`"
-        >Profile |</router-link
-      >
-      <router-link v-if="getDancerId()" :to="`/dancers/${getDancerId()}`"
-        >Profile |</router-link
-      >
-      <router-link v-if="isLoggedIn()" to="/dancers"
-        >Dancer Index |
-      </router-link>
-      <router-link v-if="isLoggedIn()" to="/posts"
-        >Job Postings Index |
-      </router-link>
-      <router-link v-if="isLoggedIn()" to="/employers"
-        >Employer Index |
-      </router-link>
-      <router-link v-if="getEmployerId()" to="/posts/new">
-        New Job Post |
-      </router-link>
-      <router-link v-if="!isLoggedIn()" to="/dancer/signup"
-        >Dancer Signup |
-      </router-link>
-      <router-link v-if="!isLoggedIn()" to="/dancer/login"
-        >Dancer Login |
-      </router-link>
-      <router-link v-if="!isLoggedIn()" to="/employer/signup"
-        >Employer Signup |
-      </router-link>
-      <router-link v-if="!isLoggedIn()" to="/employer/login"
-        >Employer Login |
-      </router-link>
-      <router-link v-if="isLoggedIn()" to="/logout">Logout</router-link> -->
     </div>
+
+    <!-- ================================
+			///// Begin page header section /////
+			================================= -->
+    <section id="page-header-section">
+      <div
+        class="section-inner no-padding bg-image"
+        style="background-image: url(/assets/img/page-header/bg-studio.jpg); background-position: 50% 50%;"
+      >
+        <!-- Element cover -->
+        <div class="cover bg-transparent-5-dark"></div>
+
+        <!-- Page header caption -->
+        <div
+          class="page-header-caption vertical-align-center text-center text-white"
+        >
+          <h1 class="page-header-title">elance</h1>
+          <ol class="breadcrumb">
+            <li><a href="index.html">home</a></li>
+            <li class="active">about us</li>
+          </ol>
+        </div>
+      </div>
+      <!-- /.section-inner -->
+    </section>
+    <!-- End page header section -->
     <router-view />
+
     <!-- ===========================
 			///// Begin footer section /////
 			============================ -->
