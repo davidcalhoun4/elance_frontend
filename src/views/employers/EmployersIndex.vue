@@ -109,19 +109,13 @@
       <!-- /.row -->
     </section>
     <!-- End blog list section -->
-    <h1>Employers</h1>
+    <!-- <h1>Employers</h1>
     Search Employers by Type Or Name:
     <input
       type="text"
       v-model="filter"
       placeholder="i.e Company or dawsondancesf"
     />
-    <!-- <label for="employer-type">Search By Employer Type:</label>
-    <select name="employer-type" v-model="filter">
-      <option>Company</option>
-      <option>Freelance Choreographer</option>
-      <option>Event Hirer</option>
-    </select> -->
     <div
       v-for="employer in filterBy(
         employers,
@@ -138,7 +132,7 @@
         </p>
         <img v-bind:src="employer.image_url" alt="" />
       </router-link>
-    </div>
+    </div> -->
   </div>
 </template>
 
