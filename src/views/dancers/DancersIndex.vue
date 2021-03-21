@@ -46,7 +46,9 @@
                     >
                   </h2>
                   <div class="blog-list-meta">
-                    <a class="article-time">{{ dancer.genre.style }}</a>
+                    <a class="article-time"
+                      ><b>{{ dancer.genre.style }}</b></a
+                    >
                   </div>
                   <hr class="hr-short" />
                   <p class="blog-list-desc"></p>
