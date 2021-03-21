@@ -26,11 +26,6 @@
             <!-- Left column -->
             <div class="col col-md-6 col-md-push-6 no-padding">
               <img v-bind:src="dancer.image_url" alt="" />
-              <!-- <a
-                href="blog-single-no-sidebar.html"
-                class="bco blog-list-image bg-image"
-                style="background-image: url(/assets/img/blog/blog-1.jpg); background-position: 50% 50%;"
-              ></a> -->
             </div>
             <!-- /.col -->
 
