@@ -96,21 +96,13 @@
 
           <!-- Right column -->
           <div class="col-lg-4 col-md-6">
-            <!-- <div class="register-wrapper">
-              <h3>information</h3>
-              <hr class="hr-short" />
-              <p>
-                Fuga laboriosam, quisquam quam saepe, magnam neque vel itaque,
-                consequuntur distinctio odit doloremque non dolor totam. Quidem
-                laudantium magnam.
-              </p>
+            <img
+              src="http://static1.squarespace.com/static/53f24e0fe4b0a4ac7c8dc6f5/54c85266e4b0b5c877bcb5ff/5bb7aa430d9297cd773f2dc5/1538764962869/c_alonzo_king_150708_629.jpg?format=1500w"
+              alt=""
+              class="margin-top-100"
+            />
+            <small>*photo - lines ballet</small>
 
-              <p>
-                Wuos nemo alias architecto, accusantium tempora attes nam conse
-                quuntur ab sunt.
-              </p>
-              <button class="btn btn-dark margin-top-15">more info...</button>
-            </div> -->
             <!-- /.register-wrapper -->
           </div>
           <!-- /.col -->

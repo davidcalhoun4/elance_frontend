@@ -80,47 +80,12 @@
 
           <!-- Right column -->
           <div class="col-md-6">
-            <!-- <div class="register-wrapper">
-              <h3><i class="fa fa-plug"></i> don't have an account yet?</h3>
-              <p class="margin-top-15">
-                Fuga laboriosam, quisquam quam saepe, magnam neque vel itaque,
-                consequuntur distinctio odit doloremque non dolor totam. Quidem
-                laudantium magnam quae, quisquam quam saepe, magnam neque vel
-                itaque.
-              </p>
-              <form>
-                <div class="form-group margin-top-20">
-                  <label for="username-2">choose your username:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="username-2"
-                    name="username"
-                    placeholder="choose your username"
-                    required
-                  />
-                </div>
-                <div class="form-group margin-top-20">
-                  <label for="password-2"
-                    >choose your password and continue:</label
-                  >
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password-2"
-                    name="password"
-                    placeholder="choose your password"
-                    required
-                  />
-                </div>
-              </form>
-              <a
-                href="pages-register.html"
-                type="submit"
-                class="btn btn-primary margin-top-15"
-                >continue registration</a
-              >
-            </div> -->
+            <img
+              src="https://www.tourismvictoria.com/sites/default/files/styles/event_details_mobile_2x/public/dv_performances_2017_odc_dead_reckoning_031_andrew_weeks_a_635px_435px.jpg?itok=2qIjNNCn"
+              alt=""
+              class="margin-top-5"
+            />
+            <small>* photo - odc/dance</small>
             <!-- /.register-wrapper -->
           </div>
           <!-- /.col -->

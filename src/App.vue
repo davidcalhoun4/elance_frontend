@@ -11,7 +11,7 @@
         <div class="header-inner">
           <!-- Begin logo -->
           <div id="logo">
-            <a href="index.html">elance</a>
+            <a href="index.html">élancé</a>
           </div>
           <!-- End logo -->
 
@@ -123,14 +123,12 @@
       <div class="section-inner bg-dark">
         <div class="row">
           <div class="col-lg-12 text-center small text-gray">
-            <h1 class="text-gray-2">elance</h1>
+            <h1 class="text-gray-2">élancé</h1>
             <ul class="footer-menu list-unstyled list-inline">
-              <li><a href="index.html">home</a></li>
-              <li><a href="pages-about.html">about us</a></li>
-              <li><a href="pages-services.html">services</a></li>
-              <li><a href="portfolio-masonry-3col.html">portfolio</a></li>
-              <li><a href="blog-grid.html">blog</a></li>
-              <li><a href="pages-contact.html">contact</a></li>
+              <li><router-link to="/">Home</router-link></li>
+              <li v-if="isLoggedIn()">
+                <router-link to="/logout">Logout</router-link>
+              </li>
             </ul>
             <p>Copyright 2015 / All rights reserved</p>
             <p>

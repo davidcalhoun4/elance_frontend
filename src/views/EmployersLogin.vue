@@ -80,47 +80,14 @@
 
           <!-- Right column -->
           <div class="col-md-6">
-            <!-- <div class="register-wrapper">
-              <h3><i class="fa fa-plug"></i> don't have an account yet?</h3>
-              <p class="margin-top-15">
-                Fuga laboriosam, quisquam quam saepe, magnam neque vel itaque,
-                consequuntur distinctio odit doloremque non dolor totam. Quidem
-                laudantium magnam quae, quisquam quam saepe, magnam neque vel
-                itaque.
-              </p>
-              <form>
-                <div class="form-group margin-top-20">
-                  <label for="username-2">choose your username:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="username-2"
-                    name="username"
-                    placeholder="choose your username"
-                    required
-                  />
-                </div>
-                <div class="form-group margin-top-20">
-                  <label for="password-2"
-                    >choose your password and continue:</label
-                  >
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password-2"
-                    name="password"
-                    placeholder="choose your password"
-                    required
-                  />
-                </div>
-              </form>
-              <a
-                href="pages-register.html"
-                type="submit"
-                class="btn btn-primary margin-top-15"
-                >continue registration</a
-              >
-            </div> -->
+            <div>
+              <img
+                src="https://www.selbyartistsmgmt.com/images/images/Alonzo%20King/F15%20by%20RJ%20Muna,%20Adji%20Cissoko%20&%20Robb%20Beresford%20-%20C_Alonzo_King_150708_Queen-King.jpg"
+                alt=""
+              />
+              <br />
+              <small>*photo - lines ballet</small>
+            </div>
             <!-- /.register-wrapper -->
           </div>
           <!-- /.col -->

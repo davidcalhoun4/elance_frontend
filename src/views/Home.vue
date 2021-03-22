@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
     <!-- ================================
 			///// Begin intro video section /////
 			================================= -->
@@ -34,7 +33,7 @@
 
         <div class="intro-video-caption align-center text-white text-center">
           <h1 class="intro-video-title">
-            elance
+            élancé
           </h1>
           <hr class="hr-short hr-white hr-big" />
           <p class="intro-video-description"></p>
@@ -49,7 +48,7 @@
     <section id="welcome-section">
       <div class="row margin-bottom-100">
         <div class="col-md-4">
-          <h2>welcome to elance</h2>
+          <h2>welcome to élancé</h2>
           <hr class="hr-short" />
         </div>
         <!-- /.col -->
