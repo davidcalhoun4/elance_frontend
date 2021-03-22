@@ -1,6 +1,27 @@
 <template>
   <div class="dancers-index">
-    <div class=" text-center margin-top-25">
+    <!-- ================================
+			///// Begin page header section /////
+			================================= -->
+    <section id="page-header-section">
+      <div
+        class="section-inner no-padding bg-image"
+        style="background-image: url(/assets/img/page-header/bg-blank.jpg); background-position: 50% 50%;"
+      >
+        <!-- Element cover -->
+        <div class="cover bg-transparent-5-dark"></div>
+
+        <!-- Page header caption -->
+        <div
+          class="page-header-caption vertical-align-center text-center text-white"
+        >
+          <h1 class="page-header-title">Browse Dancers</h1>
+        </div>
+      </div>
+      <!-- /.section-inner -->
+    </section>
+    <!-- End page header section -->
+    <div class=" text-center margin-top-35">
       Search Dancers by Genre Or Name:
       <input type="text" v-model="filter" placeholder="i.e. Ballet or Colin" />
     </div>

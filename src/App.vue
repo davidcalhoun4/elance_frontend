@@ -114,31 +114,6 @@
       <!-- End header -->
     </div>
 
-    <!-- ================================
-			///// Begin page header section /////
-			================================= -->
-    <section id="page-header-section">
-      <div
-        class="section-inner no-padding bg-image"
-        style="background-image: url(/assets/img/page-header/bg-studio.jpg); background-position: 50% 50%;"
-      >
-        <!-- Element cover -->
-        <div class="cover bg-transparent-5-dark"></div>
-
-        <!-- Page header caption -->
-        <div
-          class="page-header-caption vertical-align-center text-center text-white"
-        >
-          <h1 class="page-header-title">elance</h1>
-          <ol class="breadcrumb">
-            <li><a href="index.html">home</a></li>
-            <li class="active">about us</li>
-          </ol>
-        </div>
-      </div>
-      <!-- /.section-inner -->
-    </section>
-    <!-- End page header section -->
     <router-view />
 
     <!-- ===========================
@@ -148,7 +123,7 @@
       <div class="section-inner bg-dark">
         <div class="row">
           <div class="col-lg-12 text-center small text-gray">
-            <h1 class="text-gray-2">ELANCE</h1>
+            <h1 class="text-gray-2">elance</h1>
             <ul class="footer-menu list-unstyled list-inline">
               <li><a href="index.html">home</a></li>
               <li><a href="pages-about.html">about us</a></li>

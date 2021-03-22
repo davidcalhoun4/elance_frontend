@@ -1,6 +1,164 @@
 <template>
   <div class="dancers-edit">
-    <h1>Edit Dancer</h1>
+    <!-- =============================
+			///// Begin register section /////
+			============================== -->
+    <section id="register-section">
+      <div class="section-inner bg-transparent no-padding max-width-1200">
+        <div class="row">
+          <!-- Left column -->
+          <div class="col-lg-8 col-md-6 margin-bottom-30">
+            <div class="register-wrapper">
+              <h2><i class="fa fa-plug"></i>Edit Profile</h2>
+
+              <hr />
+
+              <!-- Begin register form -->
+              <ul>
+                <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+              </ul>
+              <form
+                id="register-form"
+                v-on:submit.prevent="updateDancer(dancer)"
+              >
+                <div class="form-group">
+                  <label>First Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="enter your first name"
+                    v-model="dancer.first_name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Last Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="enter your last name"
+                    v-model="dancer.last_name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>About:</label>
+                  <textarea
+                    row="5"
+                    cols="50"
+                    type="email"
+                    class="form-control"
+                    placeholder="enter about information"
+                    v-model="dancer.about"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Resume:</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    placeholder="upload resume"
+                    v-on:change="setFile($event)"
+                    ref="fileInput"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="genre-id">Genre:</label>
+                  <br />
+                  <select value="1" v-model="dancer.genre_id">
+                    <option value="1" selected>Ballet</option>
+                    <option value="2">Modern</option>
+                    <option value="3">Contemporary</option>
+                    <option value="4">Tap</option>
+                    <option value="5">Hip-Hop</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Video:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="attach video url"
+                    v-model="dancer.video"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Image:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="attach image url"
+                    v-model="dancer.image_url"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Email:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="attach video url"
+                    v-model="dancer.email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Password:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    v-model="dancer.password"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Re-Enter Password:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    v-model="dancer.password_confirmation"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-primary margin-top-15">
+                  Submit
+                </button>
+                <br />
+                <button
+                  v-on:click="destroyDancer()"
+                  class="btn btn-dark margin-top-15"
+                >
+                  Delete
+                </button>
+              </form>
+              <!-- End register form -->
+            </div>
+            <!-- /.register-wrapper -->
+          </div>
+          <!-- /.col -->
+
+          <!-- Right column -->
+          <div class="col-lg-4 col-md-6">
+            <div class="register-wrapper">
+              <h3>information</h3>
+              <hr class="hr-short" />
+              <p>
+                Fuga laboriosam, quisquam quam saepe, magnam neque vel itaque,
+                consequuntur distinctio odit doloremque non dolor totam. Quidem
+                laudantium magnam.
+              </p>
+
+              <p>
+                Wuos nemo alias architecto, accusantium tempora attes nam conse
+                quuntur ab sunt.
+              </p>
+              <button class="btn btn-dark margin-top-15">more info...</button>
+            </div>
+            <!-- /.register-wrapper -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.section-inner -->
+    </section>
+    <!-- End register section -->
+    <!-- <h1>Edit Dancer</h1>
     <form v-on:submit.prevent="updateDancer(dancer)">
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
@@ -15,9 +173,6 @@
         Resume:
         <input type="file" v-on:change="setFile($event)" ref="fileInput" />
       </div>
-
-      <!-- Resume:
-      <input type="text" v-model="dancer.resume" /><br /> -->
       Video:
       <input type="text" v-model="dancer.video" /><br />
 
@@ -41,7 +196,7 @@
 
       <input type="submit" value="Submit" />
     </form>
-    <button v-on:click="destroyDancer()">Destroy</button>
+    <button v-on:click="destroyDancer()">Destroy</button> -->
   </div>
 </template>
 
@@ -87,7 +242,9 @@ export default {
       formData.append("image_url", this.image_url);
       formData.append("about", this.dancer.about);
       formData.append("image_url", this.dancer.image_url);
-      formData.append("genre_id", this.dancer.genre_id);
+      if (this.genre_id) {
+        formData.append("genre_id", this.dancer.genre_id);
+      }
       if (this.resumeFile) {
         formData.append("resume_file", this.resumeFile);
       }

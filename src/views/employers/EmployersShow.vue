@@ -16,11 +16,16 @@
           </h2>
           <p>Type: {{ employer.employer_type }}</p>
           <hr class="hr-short" />
+          <div v-if="employer.id == $parent.getEmployerId()">
+            <router-link v-bind:to="`/employers/${employer.id}/edit`">
+              <button>Edit Employer</button></router-link
+            >
+          </div>
           <br />
           <a
             v-bind:href="'mailto:' + employer.email"
             class="btn btn-dark margin-top-15"
-            >Contact Employer</a
+            >Contact {{ employer.company_name }}</a
           >
         </div>
         <!-- /.col -->
