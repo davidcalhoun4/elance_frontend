@@ -15,7 +15,9 @@
         <div
           class="page-header-caption vertical-align-center text-center text-white"
         >
-          <h1 class="page-header-title">Dancer</h1>
+          <h1 class="page-header-title text-main">
+            {{ dancer.first_name }} {{ dancer.last_name }}
+          </h1>
         </div>
       </div>
       <!-- /.section-inner -->
@@ -69,8 +71,7 @@
             ></iframe>
 
             <p class="margin-top-15 margin-right-5">
-              <u v-if="dancer.about">About {{ dancer.first_name }}</u
-              >: {{ dancer.about }}
+              <u v-if="dancer.about">About Me</u>: {{ dancer.about }}
             </p>
             <hr class="hr-short margin-top-15 margin-right-5" />
             <br />

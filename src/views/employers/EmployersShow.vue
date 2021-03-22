@@ -1,6 +1,6 @@
 <template>
   <div class="employers-show">
-     <!-- ================================
+    <!-- ================================
 			///// Begin page header section /////
 			================================= -->
     <section id="page-header-section">
@@ -15,7 +15,9 @@
         <div
           class="page-header-caption vertical-align-center text-center text-white"
         >
-          <h1 class="page-header-title">Employer</h1>
+          <h1 class="page-header-title text-main">
+            {{ employer.company_name }}
+          </h1>
         </div>
       </div>
       <!-- /.section-inner -->

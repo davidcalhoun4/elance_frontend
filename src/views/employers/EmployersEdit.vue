@@ -1,6 +1,6 @@
 <template>
   <div class="employers-edit">
-     <!-- ================================
+    <!-- ================================
 			///// Begin page header section /////
 			================================= -->
     <section id="page-header-section">
@@ -30,7 +30,7 @@
           <!-- Left column -->
           <div class="col-lg-8 col-md-6 margin-bottom-30">
             <div class="register-wrapper">
-              <h2><i class="fa fa-plug"></i>Edit Profile</h2>
+              <h2>Edit Profile</h2>
 
               <hr />
 

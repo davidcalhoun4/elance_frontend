@@ -32,11 +32,16 @@
         <div class="cover bg-transparent-8-dark"></div>
 
         <div class="intro-video-caption align-center text-white text-center">
-          <h1 class="intro-video-title">
+          <h4 class="intro-video-title">
             élancé
-          </h1>
-          <hr class="hr-short hr-white hr-big" />
-          <p class="intro-video-description"></p>
+          </h4>
+          <hr class="hr-short hr-big" />
+          <p class="intro-video-description">
+            connecting employers with local talent
+          </p>
+          <p class="intro-video-description">
+            connecting dance artists with their next gig
+          </p>
         </div>
       </div>
       <!-- End YTPlayer (Youtube video background) -->
