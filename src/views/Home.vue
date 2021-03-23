@@ -33,13 +33,13 @@
         <div class="cover bg-transparent-8-dark"></div>
 
         <div class="intro-video-caption align-center text-white text-center">
-          <h3 class="intro-video-title">
+          <h3 class="intro-video-title text-main">
             élancé
           </h3>
-          <p class="intro-video-description">
+          <p class="intro-video-description text-gray">
             [ ey-lahn-sey ]
           </p>
-          <p class="intro-video-description">
+          <p class="intro-video-description text-main">
             a quick darting movement
           </p>
         </div>

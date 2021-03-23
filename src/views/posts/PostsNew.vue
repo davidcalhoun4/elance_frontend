@@ -166,7 +166,7 @@ export default {
       var params = {
         title: this.title,
         description: this.description,
-        image: this.image_url,
+        image_url: this.image_url,
         genre_id: this.genre_id,
         employer_id: this.employer_id,
       };

@@ -205,7 +205,7 @@ export default {
         password_confirmation: employer.password_confirmation,
         company_name: employer.company_name,
         description: employer.description,
-        image: employer.image_url,
+        image_url: employer.image_url,
         employer_type: employer.employer_type,
       };
       axios
@@ -220,7 +220,7 @@ export default {
         });
     },
     destroyEmployer: function() {
-      if (confirm("Are you 100% certain you want to delete this employer?")) {
+      if (confirm("Are you 100% certain you want to delete your profile?")) {
         axios.delete(`/api/employers/${this.employer.id}`).then((response) => {
           console.log(response.data);
           console.log("employer deleted");
