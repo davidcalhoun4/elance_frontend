@@ -29,7 +29,7 @@
       <div class="section-inner bg-transparent no-padding max-width-1200">
         <div class="row">
           <!-- Left column -->
-          <div class="col-lg-8 col-md-6 margin-bottom-30">
+          <div class=" col-md-6 margin-bottom-30">
             <div class="register-wrapper">
               <h2>Create Your Account</h2>
               <p class="small">Note: all fields is required.</p>
@@ -96,15 +96,16 @@
           <!-- /.col -->
 
           <!-- Right column -->
-          <div class="col-lg-4 col-md-6">
+          <div class=" col-md-6">
             <div>
               <img
-                src="https://static01.nyt.com/images/2016/11/18/arts/18NEDERLANDSDANS/18NEDERLANDSDANS-superJumbo.jpg"
+                src="https://media.npr.org/assets/img/2018/02/11/aaadt-s-glenn-allen-sims-and-linda-celeste-sims-in-alvin-ailey-s-revelations.-photo-by-nan-melville_wide-f2bb852021b702a976e2c63d2ee547e9e22dc2db.jpg"
                 alt=""
-                height="400"
-                class="margin-top-50"
+                class="margin-top-80"
               />
-              <p class="text-right">* photo - ndt dance</p>
+              <div class="text-right">
+                <small>photo - alvin ailey</small>
+              </div>
             </div>
             <!-- /.register-wrapper -->
           </div>

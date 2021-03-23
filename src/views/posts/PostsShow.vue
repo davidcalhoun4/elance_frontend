@@ -1,6 +1,6 @@
 <template>
   <div class="posts-show">
-     <!-- ================================
+    <!-- ================================
 			///// Begin page header section /////
 			================================= -->
     <section id="page-header-section">
@@ -56,7 +56,7 @@
         </div>
         <!-- /.col -->
 
-        <div class="col-md-5 text-center">
+        <div class="col-md-7 text-center">
           <h2 class="text-main margin-bottom-15">
             {{ post.title }}
           </h2>

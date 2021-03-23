@@ -28,7 +28,7 @@
       <div class="section-inner bg-transparent no-padding max-width-1200">
         <div class="row">
           <!-- Left column -->
-          <div class="col-lg-8 col-md-6 margin-bottom-30">
+          <div class=" col-md-6 margin-bottom-30">
             <div class="register-wrapper">
               <h2>Create Your Account</h2>
 
@@ -96,22 +96,15 @@
           <!-- /.col -->
 
           <!-- Right column -->
-          <div class="col-lg-4 col-md-6">
-            <!-- <div class="register-wrapper">
-              <h3>information</h3>
-              <hr class="hr-short" />
-              <p>
-                Fuga laboriosam, quisquam quam saepe, magnam neque vel itaque,
-                consequuntur distinctio odit doloremque non dolor totam. Quidem
-                laudantium magnam.
-              </p>
-
-              <p>
-                Wuos nemo alias architecto, accusantium tempora attes nam conse
-                quuntur ab sunt.
-              </p>
-              <button class="btn btn-dark margin-top-15">more info...</button>
-            </div> -->
+          <div class="col-md-6">
+            <img
+              src="https://www.tourismvictoria.com/sites/default/files/styles/event_details_mobile_2x/public/dv_performances_2017_odc_dead_reckoning_031_andrew_weeks_a_635px_435px.jpg?itok=2qIjNNCn"
+              alt=""
+              class="margin-top-40"
+            />
+            <div class="text-right">
+              <small>photo - odc/dance</small>
+            </div>
             <!-- /.register-wrapper -->
           </div>
           <!-- /.col -->

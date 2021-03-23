@@ -53,7 +53,7 @@
         </div>
         <!-- /.col -->
 
-        <div class="col-md-5 text-center">
+        <div class="col-md-7 text-center">
           <!-- <p>Type: {{ employer.employer_type }}</p> -->
           <hr class="hr-short" />
           <p>
@@ -67,12 +67,14 @@
 
       <!-- Begin info box wrap -->
       <div class="info-box-wrap text-center">
-        <h3>Employer's Posts:</h3>
+        <div>
+          <h3><u> Employer's Posts:</u></h3>
+        </div>
         <div class="row">
           <div
             v-for="post in employer.posts"
             v-bind:key="post"
-            class="col-lg-3 col-sm-6"
+            class="col-lg-4 text-center "
           >
             <!-- Begin info box 
 							* Use class "ib-bordered" for box border.

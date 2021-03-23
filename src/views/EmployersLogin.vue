@@ -87,7 +87,9 @@
                 class="margin-top-50"
               />
               <br />
-              <p class="text-right">*photo - lines ballet</p>
+              <div class="text-right">
+                <small>photo - lines ballet</small>
+              </div>
             </div>
             <!-- /.register-wrapper -->
           </div>

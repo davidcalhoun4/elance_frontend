@@ -32,15 +32,15 @@
         <div class="cover bg-transparent-8-dark"></div>
 
         <div class="intro-video-caption align-center text-white text-center">
-          <h4 class="intro-video-title">
+          <h3 class="intro-video-title">
             élancé
-          </h4>
-          <hr class="hr-short hr-big" />
+          </h3>
+
           <p class="intro-video-description">
-            connecting employers with local talent
+            [ ey-lahn-sey ]
           </p>
           <p class="intro-video-description">
-            connecting dance artists with their next gig
+            a quick darting movement
           </p>
         </div>
       </div>
@@ -52,20 +52,38 @@
 			============================= -->
     <section id="welcome-section">
       <div class="row margin-bottom-100">
-        <div class="col-md-4">
-          <h2>welcome to élancé</h2>
-          <hr class="hr-short" />
-        </div>
+        <div class="col-md-3 "></div>
         <!-- /.col -->
 
-        <div class="col-md-8">
-          <p>
-            connecting dance artists with their next gig
-          </p>
+        <div class="col-md-6.5 text-center">
+          <h3>
+            <br />
+            <span class="text-main"> <strong>élancé</strong></span> was created
+            to remove the challenge of finding dance
+            <span class="text-main"> <strong>work</strong></span>
+            <br />
+            allowing
+            <span class="text-main"> <strong> dancers</strong></span> more time
+            to spend on their artistry
+            <br />
+            <hr class="hr-short margin-top-20" />
+            <br />
+            connecting
+            <span class="text-main"> <strong>employers</strong></span> with
+            local talent
+            <br />
 
-          <p>
-            connecting employers with local talent
-          </p>
+            connecting
+            <span class="text-main"> <strong>dancers</strong></span> with their
+            next gig
+            <!-- <span class="text-main"> <strong>dancers</strong></span> are able to
+            connect directly with employers.
+            <br />
+            removing the challenge of finding dance
+            <span class="text-main"> <strong>work</strong></span>
+            <br />
+            élancé was created for connecting dance artists with their next gig -->
+          </h3>
         </div>
         <!-- /.col -->
       </div>

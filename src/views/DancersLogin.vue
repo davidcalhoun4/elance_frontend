@@ -81,11 +81,12 @@
           <!-- Right column -->
           <div class="col-md-6">
             <img
-              src="https://www.tourismvictoria.com/sites/default/files/styles/event_details_mobile_2x/public/dv_performances_2017_odc_dead_reckoning_031_andrew_weeks_a_635px_435px.jpg?itok=2qIjNNCn"
+              src="https://i0.wp.com/fjordreview.com/wp-content/uploads/2020/07/Madoka-Kariya-and-Paxton-Ricketts-in-Standby-by-Paul-Lightfoot.jpg?resize=1024%2C731&ssl=1"
               alt=""
-              class="margin-top-5"
             />
-            <small>* photo - odc/dance</small>
+            <div class="text-right">
+              <small>photo - ndt dance</small>
+            </div>
             <!-- /.register-wrapper -->
           </div>
           <!-- /.col -->
