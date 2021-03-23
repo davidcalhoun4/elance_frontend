@@ -97,21 +97,15 @@
 
           <!-- Right column -->
           <div class="col-lg-4 col-md-6">
-            <!-- <div class="register-wrapper">
-              <h3>information</h3>
-              <hr class="hr-short" />
-              <p>
-                Fuga laboriosam, quisquam quam saepe, magnam neque vel itaque,
-                consequuntur distinctio odit doloremque non dolor totam. Quidem
-                laudantium magnam.
-              </p>
-
-              <p>
-                Wuos nemo alias architecto, accusantium tempora attes nam conse
-                quuntur ab sunt.
-              </p>
-              <button class="btn btn-dark margin-top-15">more info...</button>
-            </div> -->
+            <div>
+              <img
+                src="https://static01.nyt.com/images/2016/11/18/arts/18NEDERLANDSDANS/18NEDERLANDSDANS-superJumbo.jpg"
+                alt=""
+                height="400"
+                class="margin-top-50"
+              />
+              <p class="text-right">* photo - ndt dance</p>
+            </div>
             <!-- /.register-wrapper -->
           </div>
           <!-- /.col -->

@@ -84,9 +84,10 @@
               <img
                 src="https://www.selbyartistsmgmt.com/images/images/Alonzo%20King/F15%20by%20RJ%20Muna,%20Adji%20Cissoko%20&%20Robb%20Beresford%20-%20C_Alonzo_King_150708_Queen-King.jpg"
                 alt=""
+                class="margin-top-50"
               />
               <br />
-              <small>*photo - lines ballet</small>
+              <p class="text-right">*photo - lines ballet</p>
             </div>
             <!-- /.register-wrapper -->
           </div>
