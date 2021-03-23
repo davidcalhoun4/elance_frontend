@@ -11,7 +11,7 @@
 				More info about YTPlayer: https://github.com/pupunzi/jquery.mb.YTPlayer -->
       <div
         class="youtube-bg full-height min-height-250"
-        style="background-image: url(/assets/img/video/IMG_4858.jpg); background-position: 50% 50%;"
+        style="background-image: url(/assets/img/video/fuzzy_single.jpeg); background-position: 50% 50%;"
         data-property="{
 					videoURL: 'https://www.youtube.com/watch?v=Q2I971iu8Uo',
 					containment: 'self',

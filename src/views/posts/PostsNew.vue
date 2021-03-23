@@ -6,7 +6,7 @@
     <section id="page-header-section">
       <div
         class="section-inner no-padding bg-image"
-        style="background-image: url(/assets/img/page-header/bg-blank.jpg); background-position: 50% 50%;"
+        style="background-image: url(/assets/img/page-header/fuzzy_group.jpg); background-position: 50% 50%;"
       >
         <!-- Element cover -->
         <div class="cover bg-transparent-5-dark"></div>
@@ -56,7 +56,7 @@
                     row="5"
                     cols="50"
                     class="form-control"
-                    placeholder="enter description"
+                    placeholder="who? what? when? where? why?"
                     v-model="description"
                   />
                   <small v-if="description.length < 20">
@@ -101,8 +101,9 @@
               alt=""
               class="margin-top-100"
             />
-            <small>*photo - lines ballet</small>
-
+            <div class="text-right">
+              <small>photo - lines ballet</small>
+            </div>
             <!-- /.register-wrapper -->
           </div>
           <!-- /.col -->
