@@ -119,7 +119,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="attach video url"
+                    placeholder="enter email"
                     v-model="dancer.email"
                   />
                 </div>
@@ -264,9 +264,9 @@ export default {
       }
       formData.append("first_name", this.dancer.first_name);
       formData.append("last_name", this.dancer.last_name);
-      formData.append("image_url", this.image_url);
-      formData.append("about", this.dancer.about);
       formData.append("image_url", this.dancer.image_url);
+      formData.append("about", this.dancer.about);
+      formData.append("video", this.dancer.video);
       if (this.dancer.genre_id) {
         formData.append("genre_id", this.dancer.genre_id);
       }
@@ -297,7 +297,7 @@ export default {
         });
     },
     destroyDancer: function() {
-      if (confirm("Are you 100% certain you want to delete this dancer?")) {
+      if (confirm("Are you 100% certain you want to delete your profile?")) {
         axios.delete(`/api/dancers/${this.dancer.id}`).then((response) => {
           console.log(response.data);
           console.log("dancer deleted");

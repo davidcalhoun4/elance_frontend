@@ -205,6 +205,7 @@ export default {
         password_confirmation: employer.password_confirmation,
         company_name: employer.company_name,
         description: employer.description,
+        image: employer.image_url,
         employer_type: employer.employer_type,
       };
       axios

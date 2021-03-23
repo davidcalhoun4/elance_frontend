@@ -10,10 +10,11 @@
 				Do not forget to add your background image for mobile devices (because the video background doesn't work on mobile devices).
 				More info about YTPlayer: https://github.com/pupunzi/jquery.mb.YTPlayer -->
       <div
-        class="youtube-bg full-height min-height-250"
+        id="myVideoPlayer"
+        class="youtube-bg full-height min-height-250 player"
         style="background-image: url(/assets/img/video/fuzzy_single.jpeg); background-position: 50% 50%;"
         data-property="{
-					videoURL: 'https://www.youtube.com/watch?v=Q2I971iu8Uo',
+					videoURL: 'https://www.youtube.com/watch?v=5rXP_yuH0o8',
 					containment: 'self',
 					startAt: 0,
 					stopAt: 0,
@@ -29,13 +30,12 @@
 				}"
       >
         <!-- Element cover -->
-        <div class="cover bg-transparent-7-dark"></div>
+        <div class="cover bg-transparent-8-dark"></div>
 
         <div class="intro-video-caption align-center text-white text-center">
           <h3 class="intro-video-title">
             élancé
           </h3>
-
           <p class="intro-video-description">
             [ ey-lahn-sey ]
           </p>
@@ -98,13 +98,18 @@
 <style></style>
 
 <script>
+/* global jQuery */
 export default {
   data: function() {
     return {
       message: "WELCOME TO ELANCE",
     };
   },
-  created: function() {},
+  mounted: function() {
+    jQuery(function() {
+      jQuery("#myVideoPlayer").YTPlayer();
+    });
+  },
   methods: {},
 };
 </script>

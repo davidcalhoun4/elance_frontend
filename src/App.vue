@@ -48,7 +48,7 @@
 									* Use class "dropdown-menu-right" to right align the dropdown menu.
 									* Use class "dropdown-menu-dark" to enable dark dropdown menu.
 									-->
-                  <li class="dropdown dropdown-menu-dark dropdown-hover active">
+                  <li>
                     <router-link to="/">Home | </router-link>
                   </li>
                   <li v-if="getEmployerId()">
@@ -62,13 +62,13 @@
                     >
                   </li>
                   <li v-if="isLoggedIn()">
-                    <router-link to="/dancers">Dancer Index | </router-link>
+                    <router-link to="/dancers">Dancers | </router-link>
                   </li>
                   <li v-if="isLoggedIn()">
-                    <router-link to="/posts">Job Postings Index | </router-link>
+                    <router-link to="/posts">Job Postings | </router-link>
                   </li>
                   <li v-if="isLoggedIn()">
-                    <router-link to="/employers">Employer Index | </router-link>
+                    <router-link to="/employers">Employers | </router-link>
                   </li>
                   <li v-if="getEmployerId()">
                     <router-link to="/posts/new">
