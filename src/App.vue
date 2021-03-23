@@ -11,7 +11,7 @@
         <div class="header-inner">
           <!-- Begin logo -->
           <div id="logo">
-            <a href="index.html">élancé</a>
+            <a href="index.html"><span class="text-main">élancé</span></a>
           </div>
           <!-- End logo -->
 
@@ -125,9 +125,9 @@
           <div class="col-lg-12 text-center small text-gray">
             <h1 class="text-gray-2">élancé</h1>
             <ul class="footer-menu list-unstyled list-inline">
-              <li><router-link to="/">Home</router-link></li>
+              <li><router-link to="/">Home |</router-link></li>
               <li v-if="isLoggedIn()">
-                <router-link to="/logout">Logout</router-link>
+                <router-link to="/logout">Logout |</router-link>
               </li>
             </ul>
             <p>Copyright 2015 / All rights reserved</p>

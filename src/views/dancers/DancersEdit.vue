@@ -30,7 +30,7 @@
           <!-- Left column -->
           <div class="col-lg-8 col-md-6 margin-bottom-30">
             <div class="register-wrapper">
-              <h2><i class="fa fa-plug"></i>Edit Profile</h2>
+              <h2>Edit Profile</h2>
 
               <hr />
 
@@ -82,10 +82,14 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="genre-id">Genre:</label>
+                  <label>Genre:</label>
                   <br />
-                  <select value="1" v-model="dancer.genre_id">
-                    <option value="1" selected>Ballet</option>
+                  <select
+                    v-bind:value="dancer.genre_id"
+                    name="genre"
+                    v-model="dancer.genre_id"
+                  >
+                    <option value="1">Ballet</option>
                     <option value="2">Modern</option>
                     <option value="3">Contemporary</option>
                     <option value="4">Tap</option>
@@ -154,7 +158,7 @@
           <!-- /.col -->
 
           <!-- Right column -->
-          <div class="col-lg-4 col-md-6">
+          <!-- <div class="col-lg-4 col-md-6">
             <div class="register-wrapper">
               <h3>information</h3>
               <hr class="hr-short" />
@@ -169,9 +173,9 @@
                 quuntur ab sunt.
               </p>
               <button class="btn btn-dark margin-top-15">more info...</button>
-            </div>
-            <!-- /.register-wrapper -->
-          </div>
+            </div> -->
+          <!-- /.register-wrapper -->
+          <!-- </div> -->
           <!-- /.col -->
         </div>
         <!-- /.row -->
@@ -263,7 +267,7 @@ export default {
       formData.append("image_url", this.image_url);
       formData.append("about", this.dancer.about);
       formData.append("image_url", this.dancer.image_url);
-      if (this.genre_id) {
+      if (this.dancer.genre_id) {
         formData.append("genre_id", this.dancer.genre_id);
       }
       if (this.resumeFile) {

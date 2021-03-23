@@ -11,7 +11,7 @@
 				More info about YTPlayer: https://github.com/pupunzi/jquery.mb.YTPlayer -->
       <div
         class="youtube-bg full-height min-height-250"
-        style="background-image: url(/assets/img/video/video-bg-2.jpg); background-position: 50% 50%;"
+        style="background-image: url(/assets/img/video/IMG_4858.jpg); background-position: 50% 50%;"
         data-property="{
 					videoURL: 'https://www.youtube.com/watch?v=Q2I971iu8Uo',
 					containment: 'self',
@@ -29,7 +29,7 @@
 				}"
       >
         <!-- Element cover -->
-        <div class="cover bg-transparent-8-dark"></div>
+        <div class="cover bg-transparent-7-dark"></div>
 
         <div class="intro-video-caption align-center text-white text-center">
           <h3 class="intro-video-title">
@@ -59,12 +59,14 @@
           <h3>
             <br />
             <span class="text-main"> <strong>élancé</strong></span> was created
-            to remove the challenge of finding dance
-            <span class="text-main"> <strong>work</strong></span>
+            for <span class="text-main"> <strong>dancers</strong></span> to
+            remove the challenge of finding
+            <span class="text-main"> <strong>work</strong></span> in the
+            industry
             <br />
             allowing
-            <span class="text-main"> <strong> dancers</strong></span> more time
-            to spend on their artistry
+            <span class="text-main"> <strong> dancers</strong></span> to spend
+            more time on their artistry
             <br />
             <hr class="hr-short margin-top-20" />
             <br />
