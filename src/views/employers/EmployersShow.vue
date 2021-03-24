@@ -41,7 +41,7 @@
           <hr class="hr-short" />
           <div v-if="employer.id == $parent.getEmployerId()">
             <router-link v-bind:to="`/employers/${employer.id}/edit`">
-              <button>Edit Employer</button></router-link
+              <button>Edit Profile</button></router-link
             >
           </div>
           <br />
@@ -57,7 +57,7 @@
           <!-- <p>Type: {{ employer.employer_type }}</p> -->
           <hr class="hr-short" />
           <p>
-            <u>About {{ employer.company_name }} </u>
+            <u>About {{ employer.company_name }}:</u>
             {{ employer.description }}
           </p>
         </div>
@@ -68,7 +68,9 @@
       <!-- Begin info box wrap -->
       <div class="info-box-wrap text-center">
         <div>
-          <h3><u> Employer's Posts:</u></h3>
+          <h3>
+            <u> {{ employer.company_name }} Job Postings:</u>
+          </h3>
         </div>
         <div class="row">
           <div

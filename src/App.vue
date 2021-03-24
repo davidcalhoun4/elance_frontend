@@ -49,51 +49,45 @@
 									* Use class "dropdown-menu-dark" to enable dark dropdown menu.
 									-->
                   <li>
-                    <router-link to="/">Home | </router-link>
+                    <router-link to="/">Home</router-link>
                   </li>
                   <li v-if="getEmployerId()">
                     <router-link :to="`/employers/${getEmployerId()}`"
-                      >Profile |</router-link
+                      >Profile</router-link
                     >
                   </li>
                   <li v-if="getDancerId()">
                     <router-link :to="`/dancers/${getDancerId()}`"
-                      >Profile |</router-link
+                      >Profile</router-link
                     >
                   </li>
                   <li v-if="isLoggedIn()">
-                    <router-link to="/dancers">Dancers | </router-link>
+                    <router-link to="/dancers">Dancers</router-link>
                   </li>
                   <li v-if="isLoggedIn()">
-                    <router-link to="/posts">Job Postings | </router-link>
+                    <router-link to="/posts">Job Postings</router-link>
                   </li>
                   <li v-if="isLoggedIn()">
-                    <router-link to="/employers">Employers | </router-link>
+                    <router-link to="/employers">Employers</router-link>
                   </li>
                   <li v-if="getEmployerId()">
-                    <router-link to="/posts/new">
-                      New Job Post |
-                    </router-link>
+                    <router-link to="/posts/new">New Job Post</router-link>
                   </li>
                   <li v-if="!isLoggedIn()">
-                    <router-link to="/dancer/signup"
-                      >Dancer Signup |
-                    </router-link>
+                    <router-link to="/dancer/signup">Dancer Signup</router-link>
                   </li>
                   <li v-if="!isLoggedIn()">
-                    <router-link to="/dancer/login"
-                      >Dancer Login |
-                    </router-link>
+                    <router-link to="/dancer/login">Dancer Login</router-link>
                   </li>
                   <li v-if="!isLoggedIn()">
                     <router-link to="/employer/signup"
-                      >Employer Signup |
-                    </router-link>
+                      >Employer Signup</router-link
+                    >
                   </li>
                   <li v-if="!isLoggedIn()">
                     <router-link to="/employer/login"
-                      >Employer Login |
-                    </router-link>
+                      >Employer Login</router-link
+                    >
                   </li>
                   <li v-if="isLoggedIn()">
                     <router-link to="/logout">Logout</router-link>

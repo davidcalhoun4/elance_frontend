@@ -15,7 +15,7 @@
         <div
           class="page-header-caption vertical-align-center text-center text-white"
         >
-          <h1 class="page-header-title text-main">
+          <h1 class="page-header-title">
             {{ dancer.first_name }} {{ dancer.last_name }}
           </h1>
         </div>
@@ -29,7 +29,7 @@
     <section id="skills-section">
       <div class="section-inner no-padding bg-transparent max-width-1400">
         <div class="row">
-          <div class="col-md-6 margin-bottom-60 text-center">
+          <div class="col-md-5 margin-bottom-60 text-center">
             <p class="text-main margin-bottom-20">
               <img v-bind:src="dancer.image_url" alt="" />
             </p>

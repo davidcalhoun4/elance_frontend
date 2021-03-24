@@ -16,7 +16,7 @@
         data-property="{
 					videoURL: 'https://www.youtube.com/watch?v=5rXP_yuH0o8',
 					containment: 'self',
-					startAt: 0,
+					startAt: 3,
 					stopAt: 0,
 					autoPlay: true,
 					loop: true,
@@ -33,13 +33,13 @@
         <div class="cover bg-transparent-8-dark"></div>
 
         <div class="intro-video-caption align-center text-white text-center">
-          <h3 class="intro-video-title text-main">
+          <h3 class="intro-video-title text-gray">
             élancé
           </h3>
           <p class="intro-video-description text-gray">
             [ ey-lahn-sey ]
           </p>
-          <p class="intro-video-description text-main">
+          <p class="intro-video-description text-gray">
             a quick darting movement
           </p>
         </div>
@@ -60,21 +60,20 @@
             <br />
             <span class="text-main"> <strong>élancé</strong></span> was created
             for <span class="text-main"> <strong>dancers</strong></span> to
-            remove the challenge of finding
-            <span class="text-main"> <strong>work</strong></span> in the
-            industry
+            simplify finding
+            <span class="text-main"> <strong>work</strong></span>
+            in the industry
+            <br />
             <br />
             allowing
-            <span class="text-main"> <strong> dancers</strong></span> to spend
+            <span class="text-main"> <strong> dancers</strong></span> to devote
             more time on their artistry
             <br />
             <hr class="hr-short margin-top-20" />
             <br />
             connecting
             <span class="text-main"> <strong>employers</strong></span> with
-            local talent
-            <br />
-
+            local talent <span class="text-main"> | </span>
             connecting
             <span class="text-main"> <strong>dancers</strong></span> with their
             next gig
