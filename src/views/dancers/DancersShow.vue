@@ -71,7 +71,7 @@
             ></iframe>
 
             <p class="margin-top-15 margin-right-5">
-              <u v-if="dancer.about">About Me</u>: {{ dancer.about }}
+              {{ dancer.about }}
             </p>
             <hr class="hr-short margin-top-15 margin-right-5" />
             <br />

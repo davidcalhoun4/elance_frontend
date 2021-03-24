@@ -57,7 +57,6 @@
           <!-- <p>Type: {{ employer.employer_type }}</p> -->
           <hr class="hr-short" />
           <p>
-            <u>About {{ employer.company_name }}:</u>
             {{ employer.description }}
           </p>
         </div>
@@ -88,7 +87,7 @@
                 <h3 class="info-box-title">{{ post.title }}</h3>
                 <hr class="hr-short" />
                 <p class="info-box-text">
-                  {{ post.description }}
+                  Posted {{ formattedDate(post.created) }}
                 </p>
 
                 <a href="#" class="btn btn-link btn-sm">see post</a>
@@ -144,6 +143,7 @@
 
 <script>
 import axios from "axios";
+import moment from "moment";
 export default {
   data: function() {
     return {
@@ -156,6 +156,10 @@ export default {
       this.employer = response.data;
     });
   },
-  methods: {},
+  methods: {
+    formattedDate: function(date) {
+      return moment(date).format("LL");
+    },
+  },
 };
 </script>

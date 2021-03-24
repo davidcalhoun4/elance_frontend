@@ -33,14 +33,15 @@
         <div class="cover bg-transparent-8-dark"></div>
 
         <div class="intro-video-caption align-center text-white text-center">
-          <h3 class="intro-video-title text-gray">
-            élancé
-          </h3>
+          <h3 class="intro-video-title text-gray"></h3>
+
           <p class="intro-video-description text-gray">
-            [ ey-lahn-sey ]
-          </p>
-          <p class="intro-video-description text-gray">
-            a quick darting movement
+            connecting
+            <span class="text-main"> <strong>dancers</strong></span> with their
+            next gig <span class="text-main"> | </span>
+            connecting
+            <span class="text-main"> <strong>employers</strong></span> with
+            local talent
           </p>
         </div>
       </div>
@@ -57,6 +58,18 @@
 
         <div class="col-md-6.5 text-center">
           <h3>
+            <div class="text-gray text-center">
+              <br />
+              élancé
+              <br />
+              <br />
+              [ ey-lahn-sey ]
+              <br />
+              <br />
+              a quick darting movement
+            </div>
+            <hr class="hr-short margin-top-20" />
+            <br />
             <br />
             <span class="text-main"> <strong>élancé</strong></span> was created
             for <span class="text-main"> <strong>dancers</strong></span> to
@@ -68,15 +81,7 @@
             allowing
             <span class="text-main"> <strong> dancers</strong></span> to devote
             more time on their artistry
-            <br />
-            <hr class="hr-short margin-top-20" />
-            <br />
-            connecting
-            <span class="text-main"> <strong>employers</strong></span> with
-            local talent <span class="text-main"> | </span>
-            connecting
-            <span class="text-main"> <strong>dancers</strong></span> with their
-            next gig
+
             <!-- <span class="text-main"> <strong>dancers</strong></span> are able to
             connect directly with employers.
             <br />
