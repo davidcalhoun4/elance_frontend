@@ -15,7 +15,7 @@
         <div
           class="page-header-caption vertical-align-center text-center text-white"
         >
-          <h1 class="page-header-title text-main">
+          <h1 class="page-header-title ">
             {{ employer.company_name }}
           </h1>
         </div>
@@ -37,7 +37,7 @@
           <h2 class="text-main margin-bottom-15">
             {{ employer.company_name }}
           </h2>
-          <p>Type: {{ employer.employer_type }}</p>
+          <p>{{ employer.employer_type }}</p>
           <hr class="hr-short" />
           <div v-if="employer.id == $parent.getEmployerId()">
             <router-link v-bind:to="`/employers/${employer.id}/edit`">
@@ -53,7 +53,7 @@
         </div>
         <!-- /.col -->
 
-        <div class="col-md-7 text-center">
+        <div class="col-md-7 text-center margin-top-50">
           <!-- <p>Type: {{ employer.employer_type }}</p> -->
           <hr class="hr-short" />
           <p>

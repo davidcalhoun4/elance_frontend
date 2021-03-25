@@ -58,18 +58,6 @@
 
         <div class="col-md-6.5 text-center">
           <h3>
-            <div class="text-gray text-center">
-              <br />
-              élancé
-              <br />
-              <br />
-              [ ey-lahn-sey ]
-              <br />
-              <br />
-              a quick darting movement
-            </div>
-            <hr class="hr-short margin-top-20" />
-            <br />
             <br />
             <span class="text-main"> <strong>élancé</strong></span> was created
             for <span class="text-main"> <strong>dancers</strong></span> to
@@ -81,15 +69,29 @@
             allowing
             <span class="text-main"> <strong> dancers</strong></span> to devote
             more time on their artistry
+            <br />
+            <hr class="hr-short margin-top-40" />
+          </h3>
+          <div class="text-gray text-center">
+            <h3>
+              <br />
+              élancé
+              <br />
+              <br />
+              [ ey-lahn-sey ]
+              <br />
+              <br />
+              a quick darting movement
+            </h3>
+          </div>
 
-            <!-- <span class="text-main"> <strong>dancers</strong></span> are able to
+          <!-- <span class="text-main"> <strong>dancers</strong></span> are able to
             connect directly with employers.
             <br />
             removing the challenge of finding dance
             <span class="text-main"> <strong>work</strong></span>
             <br />
             élancé was created for connecting dance artists with their next gig -->
-          </h3>
         </div>
         <!-- /.col -->
       </div>

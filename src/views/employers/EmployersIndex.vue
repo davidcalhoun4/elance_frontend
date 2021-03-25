@@ -72,7 +72,7 @@
                   </h2>
                   <div class="blog-list-meta">
                     <a v-if="employer.employer_type" class="article-time"
-                      ><b>{{ employer.employer_type }}</b>
+                      ><b>- {{ employer.employer_type }} -</b>
                     </a>
                   </div>
                   <hr class="hr-short" />

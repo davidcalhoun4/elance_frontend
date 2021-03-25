@@ -85,7 +85,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary margin-top-15">
-                  Create Post
+                  create post
                 </button>
               </form>
               <!-- End register form -->

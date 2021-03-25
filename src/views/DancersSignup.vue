@@ -32,7 +32,6 @@
           <div class=" col-md-6 margin-bottom-30">
             <div class="register-wrapper">
               <h2>Create Your Account</h2>
-              <p class="small">Note: all fields is required.</p>
 
               <hr />
 
