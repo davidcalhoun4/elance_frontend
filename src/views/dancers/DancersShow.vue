@@ -49,12 +49,6 @@
               class="btn btn-dark margin-top-15"
               >Contact Dancer</a
             >
-
-            <!-- <div v-if="dancer.id == $parent.getDancerId()">
-              <router-link v-bind:to="`/dancers/${dancer.id}/edit`"
-                ><button>Edit Profile</button></router-link
-              >
-            </div> -->
           </div>
           <!-- /.col -->
 
