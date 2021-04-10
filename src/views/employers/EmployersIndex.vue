@@ -94,61 +94,9 @@
       </div>
       <!-- End blog-list -->
 
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <!-- Begin pagination -->
-          <nav>
-            <ul class="pagination margin-top-100">
-              <li>
-                <!-- <a href="#" aria-label="Previous">
-                  <span aria-hidden="true">first</span>
-                </a> -->
-              </li>
-              <li><a href="#">prev</a></li>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-
-              <li><a href="#">next</a></li>
-              <li>
-                <!-- <a href="#" aria-label="Next">
-                  <span aria-hidden="true">last</span>
-                </a> -->
-              </li>
-            </ul>
-            <!-- <div class="pagination-info ">showing page 2 of 48</div> -->
-          </nav>
-          <!-- End pagination -->
-        </div>
-        <!-- /.col -->
-      </div>
       <!-- /.row -->
     </section>
     <!-- End blog list section -->
-    <!-- <h1>Employers</h1>
-    Search Employers by Type Or Name:
-    <input
-      type="text"
-      v-model="filter"
-      placeholder="i.e Company or dawsondancesf"
-    />
-    <div
-      v-for="employer in filterBy(
-        employers,
-        filter,
-        'employer_type',
-        'company_name'
-      )"
-      v-bind:key="employer.id"
-    >
-      <router-link :to="`/employers/${employer.id}`">
-        <h2>{{ employer.company_name }}</h2>
-        <p v-if="employer.employer_type">
-          Employer Type: {{ employer.employer_type }}
-        </p>
-        <img v-bind:src="employer.image_url" alt="" />
-      </router-link>
-    </div> -->
   </div>
 </template>
 

@@ -6,7 +6,7 @@
     <section id="page-header-section">
       <div
         class="section-inner no-padding bg-image"
-        style="background-image: url(/assets/img/page-header/bg-blank.jpg); background-position: 50% 50%;"
+        style="background-image: url(/assets/img/page-header/fuzzy.jpeg); background-position: 50% 50%;"
       >
         <!-- Element cover -->
         <div class="cover bg-transparent-5-dark"></div>
@@ -96,58 +96,12 @@
             <!-- /.register-wrapper -->
           </div>
           <!-- /.col -->
-
-          <!-- Right column -->
-          <div class="col-lg-4 col-md-6">
-            <!-- <div class="register-wrapper">
-              <h3>information</h3>
-              <hr class="hr-short" />
-              <p>
-                Fuga laboriosam, quisquam quam saepe, magnam neque vel itaque,
-                consequuntur distinctio odit doloremque non dolor totam. Quidem
-                laudantium magnam.
-              </p>
-
-              <p>
-                Wuos nemo alias architecto, accusantium tempora attes nam conse
-                quuntur ab sunt.
-              </p>
-              <button class="btn btn-dark margin-top-15">more info...</button>
-            </div> -->
-            <!-- /.register-wrapper -->
-          </div>
-          <!-- /.col -->
         </div>
         <!-- /.row -->
       </div>
       <!-- /.section-inner -->
     </section>
     <!-- End register section -->
-    <!-- <h1>Edit Post</h1>
-    <form v-on:submit.prevent="updatePost(post)">
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      Title:
-      <input type="text" v-model="post.title" /><br />
-      Description:
-      <input type="text" v-model="post.description" /><br />
-      Image:
-      <input type="text" v-model="post.image_url" /><br />
-
-      <label for="genre-id">Choose a Genre:</label>
-      <select name="genres" v-model="post.genre_id">
-        <option value="1">Ballet</option>
-        <option value="2">Modern</option>
-        <option value="3">Contemporary</option>
-        <option value="4">Tap</option>
-        <option value="5">Hip-Hop</option>
-      </select>
-      <br />
-
-      <input type="submit" value="Update Post" />
-    </form>
-    <button v-on:click="destroyPost()">Destroy</button> -->
   </div>
 </template>
 
