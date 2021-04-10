@@ -96,56 +96,8 @@
         <!-- /.blog-wrap -->
       </div>
       <!-- End blog-list -->
-
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <!-- Begin pagination -->
-          <nav>
-            <ul class="pagination margin-top-100">
-              <li>
-                <!-- <a href="#" aria-label="Previous">
-                  <span aria-hidden="true">first</span>
-                </a> -->
-              </li>
-              <li><a href="#">prev</a></li>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-
-              <li><a href="#">next</a></li>
-              <li>
-                <!-- <a href="#" aria-label="Next">
-                  <span aria-hidden="true">last</span>
-                </a> -->
-              </li>
-            </ul>
-            <!-- <div class="pagination-info ">showing page 2 of 48</div> -->
-          </nav>
-          <!-- End pagination -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
     </section>
     <!-- End blog list section -->
-    <!-- <h1>Posts</h1>
-    <label for="genre-id">Search By Genre:</label>
-    <input
-      type="text"
-      v-model="filter"
-      placeholder="Ballet, Modern, Contemporary, Tap, Hip-Hop"
-    />
-
-    <div v-for="post in filterBy(posts, filter, 'genre')" v-bind:key="post.id">
-      <router-link :to="`/posts/${post.id}`">
-        <h2>Title: {{ post.title }}</h2>
-        <h3>Employer: {{ post.employer.company_name }}</h3>
-        <p>Dance Genre: {{ post.genre.style }}</p>
-
-        <img v-bind:src="post.image_url" alt="" />
-        <h1>______________________________________________</h1>
-      </router-link>
-    </div> -->
   </div>
 </template>
 

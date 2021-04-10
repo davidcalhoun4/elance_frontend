@@ -156,72 +156,12 @@
             <!-- /.register-wrapper -->
           </div>
           <!-- /.col -->
-
-          <!-- Right column -->
-          <!-- <div class="col-lg-4 col-md-6">
-            <div class="register-wrapper">
-              <h3>information</h3>
-              <hr class="hr-short" />
-              <p>
-                Fuga laboriosam, quisquam quam saepe, magnam neque vel itaque,
-                consequuntur distinctio odit doloremque non dolor totam. Quidem
-                laudantium magnam.
-              </p>
-
-              <p>
-                Wuos nemo alias architecto, accusantium tempora attes nam conse
-                quuntur ab sunt.
-              </p>
-              <button class="btn btn-dark margin-top-15">more info...</button>
-            </div> -->
-          <!-- /.register-wrapper -->
-          <!-- </div> -->
-          <!-- /.col -->
         </div>
         <!-- /.row -->
       </div>
       <!-- /.section-inner -->
     </section>
     <!-- End register section -->
-    <!-- <h1>Edit Dancer</h1>
-    <form v-on:submit.prevent="updateDancer(dancer)">
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      First Name:
-      <input type="text" v-model="dancer.first_name" /><br />
-      Last Name:
-      <input type="text" v-model="dancer.last_name" /><br />
-      About:
-      <input type="text" v-model="dancer.about" /><br />
-      <div>
-        Resume:
-        <input type="file" v-on:change="setFile($event)" ref="fileInput" />
-      </div>
-      Video:
-      <input type="text" v-model="dancer.video" /><br />
-
-      <label for="genre-id">Choose a Genre:</label>
-      <select value="1" name="genre" v-model="dancer.genre_id">
-        <option value="1" selected>Ballet</option>
-        <option value="2">Modern</option>
-        <option value="3">Contemporary</option>
-        <option value="4">Tap</option>
-        <option value="5">Hip-Hop</option>
-      </select>
-      <br />
-      Image:
-      <input type="text" v-model="dancer.image_url" /><br />
-      Email:
-      <input type="text" v-model="dancer.email" /><br />
-      Password:
-      <input type="text" v-model="dancer.password" /><br />
-      Password Confirmation:
-      <input type="text" v-model="dancer.password_confirmation" /><br />
-
-      <input type="submit" value="Submit" />
-    </form>
-    <button v-on:click="destroyDancer()">Destroy</button> -->
   </div>
 </template>
 
@@ -273,18 +213,6 @@ export default {
       if (this.resumeFile) {
         formData.append("resume_file", this.resumeFile);
       }
-      // var params = {
-      //   email: dancer.name,
-      //   password: dancer.password,
-      //   password_confirmation: dancer.password_confirmation,
-      //   first_name: dancer.first_name,
-      //   last_name: dancer.last_name,
-      //   image_url: dancer.image_url,
-      //   resume: dancer.resume,
-      //   about: dancer.about,
-      //   video: dancer.video,
-      //   genre_id: dancer.genre_id,
-      // };
       axios
         .patch(`/api/dancers/${this.dancer.id}`, formData)
         .then((response) => {

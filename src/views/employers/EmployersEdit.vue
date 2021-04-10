@@ -124,61 +124,12 @@
             <!-- /.register-wrapper -->
           </div>
           <!-- /.col -->
-
-          <!-- Right column -->
-          <div class="col-lg-4 col-md-6">
-            <!-- <div class="register-wrapper">
-              <h3>information</h3>
-              <hr class="hr-short" />
-              <p>
-                Fuga laboriosam, quisquam quam saepe, magnam neque vel itaque,
-                consequuntur distinctio odit doloremque non dolor totam. Quidem
-                laudantium magnam.
-              </p>
-
-              <p>
-                Wuos nemo alias architecto, accusantium tempora attes nam conse
-                quuntur ab sunt.
-              </p>
-              <button class="btn btn-dark margin-top-15">more info...</button>
-            </div> -->
-            <!-- /.register-wrapper -->
-          </div>
-          <!-- /.col -->
         </div>
         <!-- /.row -->
       </div>
       <!-- /.section-inner -->
     </section>
     <!-- End register section -->
-    <!-- <h1>Edit Employer</h1>
-    <form v-on:submit.prevent="updateEmployer(employer)">
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      Company Name:
-      <input type="text" v-model="employer.company_name" /><br />
-      Description:
-      <input type="text" v-model="employer.description" /><br />
-
-      <label for="employer-type">Employer Type:</label>
-      <select name="employer_type" v-model="employer.employer_type">
-        <option value="Company">Company</option>
-        <option value="Freelance Choreographer">Freelance Choreographer</option>
-        <option value="Evener Hirer">Event Hirer</option>
-      </select>
-      <br />
-
-      Email:
-      <input type="text" v-model="employer.email" /><br />
-      Password:
-      <input type="text" v-model="employer.password" /><br />
-      Password Confirmation:
-      <input type="text" v-model="employer.password_confirmation" /><br />
-
-      <input type="submit" value="Submit" />
-    </form>
-    <button v-on:click="destroyEmployer()">Destroy</button> -->
   </div>
 </template>
 

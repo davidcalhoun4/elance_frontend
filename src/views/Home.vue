@@ -16,7 +16,7 @@
         data-property="{
 					videoURL: 'https://www.youtube.com/watch?v=5rXP_yuH0o8',
 					containment: 'self',
-					startAt: 3,
+					startAt: 0,
 					stopAt: 0,
 					autoPlay: true,
 					loop: true,
@@ -84,14 +84,6 @@
               a quick darting movement
             </h3>
           </div>
-
-          <!-- <span class="text-main"> <strong>dancers</strong></span> are able to
-            connect directly with employers.
-            <br />
-            removing the challenge of finding dance
-            <span class="text-main"> <strong>work</strong></span>
-            <br />
-            élancé was created for connecting dance artists with their next gig -->
         </div>
         <!-- /.col -->
       </div>
