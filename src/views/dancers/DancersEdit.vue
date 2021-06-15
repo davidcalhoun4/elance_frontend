@@ -12,9 +12,7 @@
         <div class="cover bg-transparent-5-dark"></div>
 
         <!-- Page header caption -->
-        <div
-          class="page-header-caption vertical-align-center text-center text-white"
-        >
+        <div class="page-header-caption vertical-align-center text-center text-white">
           <h1 class="page-header-title">Edit Profile</h1>
         </div>
       </div>
@@ -38,10 +36,7 @@
               <ul>
                 <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
               </ul>
-              <form
-                id="register-form"
-                v-on:submit.prevent="updateDancer(dancer)"
-              >
+              <form id="register-form" v-on:submit.prevent="updateDancer(dancer)">
                 <div class="form-group">
                   <label>First Name:</label>
                   <input
@@ -84,11 +79,7 @@
                 <div class="form-group">
                   <label>Genre:</label>
                   <br />
-                  <select
-                    v-bind:value="dancer.genre_id"
-                    name="genre"
-                    v-model="dancer.genre_id"
-                  >
+                  <select v-bind:value="dancer.genre_id" name="genre" v-model="dancer.genre_id">
                     <option value="1">Ballet</option>
                     <option value="2">Modern</option>
                     <option value="3">Contemporary</option>
@@ -98,56 +89,30 @@
                 </div>
                 <div class="form-group">
                   <label>Video:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="attach video url"
-                    v-model="dancer.video"
-                  />
+                  <input type="text" class="form-control" placeholder="attach video url" v-model="dancer.video" />
                 </div>
                 <div class="form-group">
                   <label>Image:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="attach image url"
-                    v-model="dancer.image_url"
-                  />
+                  <input type="text" class="form-control" placeholder="attach image url" v-model="dancer.image_url" />
                 </div>
                 <div class="form-group">
                   <label>Email:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="enter email"
-                    v-model="dancer.email"
-                  />
+                  <input type="text" class="form-control" placeholder="enter email" v-model="dancer.email" />
                 </div>
                 <div class="form-group">
                   <label>Password:</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    v-model="dancer.password"
-                  />
+                  <input type="password" class="form-control" v-model="dancer.password" />
                 </div>
                 <div class="form-group">
                   <label>Re-Enter Password:</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    v-model="dancer.password_confirmation"
-                  />
+                  <input type="password" class="form-control" v-model="dancer.password_confirmation" />
                 </div>
 
                 <button type="submit" class="btn btn-primary margin-top-15">
                   Submit
                 </button>
                 <br />
-                <button
-                  v-on:click="destroyDancer()"
-                  class="btn btn-dark margin-top-15"
-                >
+                <button v-on:click="destroyDancer()" class="btn btn-dark margin-top-15">
                   Delete
                 </button>
               </form>
@@ -181,7 +146,7 @@ export default {
     };
   },
   created: function() {
-    axios.get(`/api/dancers/${this.$route.params.id}`).then((response) => {
+    axios.get(`/api/dancers/${this.$route.params.id}`).then(response => {
       console.log("dancer show", response);
       this.dancer = response.data;
     });
@@ -197,10 +162,7 @@ export default {
       formData.append("email", this.dancer.email);
       if (this.dancer.password) {
         formData.append("password", this.dancer.password);
-        formData.append(
-          "password_confirmation",
-          this.dancer.password_confirmation
-        );
+        formData.append("password_confirmation", this.dancer.password_confirmation);
       }
       formData.append("first_name", this.dancer.first_name);
       formData.append("last_name", this.dancer.last_name);
@@ -215,18 +177,18 @@ export default {
       }
       axios
         .patch(`/api/dancers/${this.dancer.id}`, formData)
-        .then((response) => {
+        .then(response => {
           console.log("dancer update", response);
           this.$router.push(`/dancers/${this.dancer.id}`);
         })
-        .catch((error) => {
+        .catch(error => {
           console.log("dancer update error", error.response);
           this.errors = error.response.data.errors;
         });
     },
     destroyDancer: function() {
       if (confirm("Are you 100% certain you want to delete your profile?")) {
-        axios.delete(`/api/dancers/${this.dancer.id}`).then((response) => {
+        axios.delete(`/api/dancers/${this.dancer.id}`).then(response => {
           console.log(response.data);
           console.log("dancer deleted");
           localStorage.removeItem("dancer_id");

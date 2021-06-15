@@ -12,9 +12,7 @@
         <div class="cover bg-transparent-5-dark"></div>
 
         <!-- Page header caption -->
-        <div
-          class="page-header-caption vertical-align-center text-center text-white"
-        >
+        <div class="page-header-caption vertical-align-center text-center text-white">
           <h1 class="page-header-title">Browse Posts</h1>
         </div>
       </div>
@@ -23,11 +21,7 @@
     <!-- End page header section -->
     <div class=" text-center margin-top-25">
       Search By Genre:
-      <input
-        ype="text"
-        v-model="filter"
-        placeholder="Ballet, Modern, Contemporary, Tap, Hip-Hop"
-      />
+      <input ype="text" v-model="filter" placeholder="Ballet, Modern, Contemporary, Tap, Hip-Hop" />
     </div>
     <!-- ==============================
 			///// Begin blog list section /////
@@ -59,21 +53,14 @@
               <router-link :to="`/posts/${post.id}`">
                 <div class="bco blog-list-info">
                   <h2 class="blog-list-title">
-                    <a
-                      href="blog-single-no-sidebar.html"
-                      title="Aenean Odio Metus"
-                      >{{ post.title }}</a
-                    >
+                    <a href="blog-single-no-sidebar.html" title="Aenean Odio Metus">{{ post.title }}</a>
                   </h2>
                   <div class="blog-list-meta">
                     <h5 class="article-time">
                       <b>- {{ post.genre.style }} -</b>
                     </h5>
                     <div class="blog-list-title">
-                      <h4
-                        href="blog-single-no-sidebar.html"
-                        title="Aenean Odio Metus"
-                      >
+                      <h4 href="blog-single-no-sidebar.html" title="Aenean Odio Metus">
                         {{ post.employer.company_name }}
                       </h4>
                     </div>
@@ -81,11 +68,7 @@
                   <hr class="hr-short" />
                   <p class="blog-list-desc"></p>
 
-                  <a
-                    href="blog-single-no-sidebar.html"
-                    class="btn btn-primary margin-top-40"
-                    >view post
-                  </a>
+                  <a href="blog-single-no-sidebar.html" class="btn btn-primary margin-top-40">view post</a>
                 </div>
               </router-link>
             </div>
@@ -113,7 +96,7 @@ export default {
     };
   },
   created: function() {
-    axios.get("/api/posts").then((response) => {
+    axios.get("/api/posts").then(response => {
       console.log("post index", response);
       this.posts = response.data;
     });

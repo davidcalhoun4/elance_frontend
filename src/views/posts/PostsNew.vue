@@ -12,9 +12,7 @@
         <div class="cover bg-transparent-5-dark"></div>
 
         <!-- Page header caption -->
-        <div
-          class="page-header-caption vertical-align-center text-center text-white"
-        >
+        <div class="page-header-caption vertical-align-center text-center text-white">
           <h1 class="page-header-title">Create Post</h1>
         </div>
       </div>
@@ -41,12 +39,7 @@
               <form id="register-form" v-on:submit.prevent="createPost()">
                 <div class="form-group">
                   <label>Title</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="enter title"
-                    v-model="title"
-                  />
+                  <input type="text" class="form-control" placeholder="enter title" v-model="title" />
                 </div>
                 <div class="form-group">
                   <label>Description:</label>
@@ -59,18 +52,11 @@
                     placeholder="who? what? when? where? why?"
                     v-model="description"
                   />
-                  <small v-if="description.length < 20">
-                    {{ 20 - description.length }} characters minimum</small
-                  >
+                  <small v-if="description.length < 20">{{ 20 - description.length }} characters minimum</small>
                 </div>
                 <div class="form-group">
                   <label>Image:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="attach image url"
-                    v-model="image_url"
-                  />
+                  <input type="text" class="form-control" placeholder="attach image url" v-model="image_url" />
                 </div>
                 <div class="form-group">
                   <label for="genre-id">Choose a Genre:</label>
@@ -142,11 +128,11 @@ export default {
       };
       axios
         .post("/api/posts", params)
-        .then((response) => {
+        .then(response => {
           console.log("post create", response);
           this.$router.push("/posts");
         })
-        .catch((error) => {
+        .catch(error => {
           console.log("post create error", error.response);
           this.errors = error.response.data.errors;
         });

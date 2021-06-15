@@ -52,14 +52,10 @@
                     <router-link to="/">Home</router-link>
                   </li>
                   <li v-if="getEmployerId()">
-                    <router-link :to="`/employers/${getEmployerId()}`"
-                      >Profile</router-link
-                    >
+                    <router-link :to="`/employers/${getEmployerId()}`">Profile</router-link>
                   </li>
                   <li v-if="getDancerId()">
-                    <router-link :to="`/dancers/${getDancerId()}`"
-                      >Profile</router-link
-                    >
+                    <router-link :to="`/dancers/${getDancerId()}`">Profile</router-link>
                   </li>
                   <li v-if="isLoggedIn()">
                     <router-link to="/dancers">Dancers</router-link>
@@ -80,14 +76,10 @@
                     <router-link to="/dancer/login">Dancer Login</router-link>
                   </li>
                   <li v-if="!isLoggedIn()">
-                    <router-link to="/employer/signup"
-                      >Employer Signup</router-link
-                    >
+                    <router-link to="/employer/signup">Employer Signup</router-link>
                   </li>
                   <li v-if="!isLoggedIn()">
-                    <router-link to="/employer/login"
-                      >Employer Login</router-link
-                    >
+                    <router-link to="/employer/login">Employer Login</router-link>
                   </li>
                   <li v-if="isLoggedIn()">
                     <router-link to="/logout">Logout</router-link>
@@ -135,9 +127,7 @@
         <!-- /.row -->
 
         <!-- Scroll to top button -->
-        <a href="#body-content" class="scrolltotop sm-scroll"
-          ><i class="fa fa-chevron-up"></i
-        ></a>
+        <a href="#body-content" class="scrolltotop sm-scroll"><i class="fa fa-chevron-up"></i></a>
       </div>
       <!-- /.section-inner -->
     </section>

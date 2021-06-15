@@ -12,9 +12,7 @@
         <div class="cover bg-transparent-5-dark"></div>
 
         <!-- Page header caption -->
-        <div
-          class="page-header-caption vertical-align-center text-center text-white"
-        >
+        <div class="page-header-caption vertical-align-center text-center text-white">
           <h1 class="page-header-title">Edit Post</h1>
         </div>
       </div>
@@ -41,12 +39,7 @@
               <form id="register-form" v-on:submit.prevent="updatePost(post)">
                 <div class="form-group">
                   <label>Title:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="enter your company name"
-                    v-model="post.title"
-                  />
+                  <input type="text" class="form-control" placeholder="enter your company name" v-model="post.title" />
                 </div>
                 <div class="form-group">
                   <label>Description:</label>
@@ -61,12 +54,7 @@
                 </div>
                 <div class="form-group">
                   <label>Image:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="attach image url"
-                    v-model="post.image_url"
-                  />
+                  <input type="text" class="form-control" placeholder="attach image url" v-model="post.image_url" />
                 </div>
                 <div class="form-group">
                   <label for="genre-id">Choose a Genre:</label>
@@ -84,10 +72,7 @@
                   Update
                 </button>
                 <br />
-                <button
-                  v-on:click="destroyPost()"
-                  class="btn btn-dark margin-top-15"
-                >
+                <button v-on:click="destroyPost()" class="btn btn-dark margin-top-15">
                   Delete
                 </button>
               </form>
@@ -115,7 +100,7 @@ export default {
     };
   },
   created: function() {
-    axios.get(`/api/posts/${this.$route.params.id}`).then((response) => {
+    axios.get(`/api/posts/${this.$route.params.id}`).then(response => {
       console.log("post show", response);
       this.post = response.data;
     });
@@ -130,18 +115,18 @@ export default {
       };
       axios
         .patch(`/api/posts/${this.post.id}`, params)
-        .then((response) => {
+        .then(response => {
           console.log("post update", response);
           this.$router.push(`/posts/${this.post.id}`);
         })
-        .catch((error) => {
+        .catch(error => {
           console.log("post update error", error.response);
           this.errors = error.response.data.errors;
         });
     },
     destroyPost: function() {
       if (confirm("Are you 100% certain you want to delete this post?")) {
-        axios.delete(`/api/posts/${this.post.id}`).then((response) => {
+        axios.delete(`/api/posts/${this.post.id}`).then(response => {
           console.log(response.data);
           console.log("post deleted");
           this.$router.push("/posts");

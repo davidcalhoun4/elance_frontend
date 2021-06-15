@@ -11,12 +11,10 @@ import DancersIndex from "../views/dancers/DancersIndex.vue";
 import DancersShow from "../views/dancers/DancersShow.vue";
 import DancersEdit from "../views/dancers/DancersEdit.vue";
 
-
 import PostsIndex from "../views/posts/PostsIndex.vue";
 import PostsShow from "../views/posts/PostsShow.vue";
 import PostsEdit from "../views/posts/PostsEdit.vue";
 import PostsNew from "../views/posts/PostsNew.vue";
-
 
 import EmployersIndex from "../views/employers/EmployersIndex.vue";
 import EmployersShow from "../views/employers/EmployersShow.vue";
@@ -28,7 +26,7 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
   },
   {
     path: "/about",
@@ -36,90 +34,89 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
     path: "/dancer/signup",
     name: "dancer-signup",
-    component: DancersSignup
+    component: DancersSignup,
   },
   {
     path: "/employer/signup",
     name: "employer-signup",
-    component: EmployersSignup
+    component: EmployersSignup,
   },
   {
     path: "/dancer/login",
     name: "dancer-login",
-    component: DancersLogin
+    component: DancersLogin,
   },
   {
     path: "/employer/login",
     name: "employer-login",
-    component: EmployersLogin
+    component: EmployersLogin,
   },
   {
     path: "/logout",
     name: "logout",
-    component: Logout
+    component: Logout,
   },
   {
     path: "/dancers",
     name: "dancers-index",
-    component: DancersIndex
+    component: DancersIndex,
   },
   {
     path: "/dancers/:id",
     name: "dancers-show",
-    component: DancersShow
+    component: DancersShow,
   },
   {
     path: "/dancers/:id/edit",
     name: "dancers-edit",
-    component: DancersEdit
+    component: DancersEdit,
   },
   {
     path: "/posts",
     name: "posts-index",
-    component: PostsIndex
+    component: PostsIndex,
   },
   {
     path: "/posts/new",
     name: "posts-new",
-    component: PostsNew
+    component: PostsNew,
   },
   {
     path: "/posts/:id",
     name: "posts-show",
-    component: PostsShow
+    component: PostsShow,
   },
   {
     path: "/posts/:id/edit",
     name: "posts-edit",
-    component: PostsEdit
+    component: PostsEdit,
   },
   {
     path: "/employers/:id",
     name: "employers-show",
-    component: EmployersShow
+    component: EmployersShow,
   },
   {
     path: "/employers/:id/edit",
     name: "employers-edit",
-    component: EmployersEdit
+    component: EmployersEdit,
   },
   {
     path: "/employers",
     name: "employers-index",
-    component: EmployersIndex
-  }
+    component: EmployersIndex,
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;

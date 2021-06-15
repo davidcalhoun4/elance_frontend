@@ -12,12 +12,8 @@
         <div class="cover bg-transparent-5-dark"></div>
 
         <!-- Page header caption -->
-        <div
-          class="page-header-caption vertical-align-center text-center text-white"
-        >
-          <h1 class="page-header-title">
-            {{ dancer.first_name }} {{ dancer.last_name }}
-          </h1>
+        <div class="page-header-caption vertical-align-center text-center text-white">
+          <h1 class="page-header-title">{{ dancer.first_name }} {{ dancer.last_name }}</h1>
         </div>
       </div>
       <!-- /.section-inner -->
@@ -40,25 +36,28 @@
             <hr class="hr-short margin-bottom-10 " />
             <br />
             <div v-if="dancer.id == $parent.getDancerId()">
-              <router-link v-bind:to="`/dancers/${dancer.id}/edit`"
-                ><button>Edit Profile</button></router-link
-              >
+              <router-link v-bind:to="`/dancers/${dancer.id}/edit`"><button>Edit Profile</button></router-link>
             </div>
-            <a
-              v-bind:href="'mailto:' + dancer.email"
-              class="btn btn-dark margin-top-15"
-              >Contact Dancer</a
-            >
+            <a v-bind:href="'mailto:' + dancer.email" class="btn btn-dark margin-top-15">Contact Dancer</a>
           </div>
           <!-- /.col -->
 
           <div class="col-md-6 text-center">
             <!-- Begin progress bar wrap -->
-            <iframe
+            <!-- <iframe
               v-if="dancer.youtube_embed"
               width="560"
               height="315"
               :src="dancer.youtube_embed"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe> -->
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/qJGxcDhFCiE"
+              title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -69,11 +68,7 @@
             </p>
             <hr class="hr-short margin-top-15 margin-right-5" />
             <br />
-            <a
-              :href="dancer.resume"
-              class="btn btn-primary margin-top-15 margin-right-5"
-              >View PDF Resume</a
-            >
+            <a :href="dancer.resume" class="btn btn-primary margin-top-15 margin-right-5">View PDF Resume</a>
           </div>
           <!-- /.col -->
         </div>
@@ -100,7 +95,7 @@ export default {
     };
   },
   created: function() {
-    axios.get(`/api/dancers/${this.$route.params.id}`).then((response) => {
+    axios.get(`/api/dancers/${this.$route.params.id}`).then(response => {
       console.log("dancers show", response);
       this.dancer = response.data;
     });
