@@ -12,9 +12,7 @@
         <div class="cover bg-transparent-5-dark"></div>
 
         <!-- Page header caption -->
-        <div
-          class="page-header-caption vertical-align-center text-center text-white"
-        >
+        <div class="page-header-caption vertical-align-center text-center text-white">
           <h1 class="page-header-title">Employer Login</h1>
         </div>
       </div>
@@ -36,11 +34,7 @@
               <form id="login-form" v-on:submit.prevent="submit()">
                 <div class="form-group">
                   <ul>
-                    <li
-                      class="text-danger"
-                      v-for="error in errors"
-                      v-bind:key="error"
-                    >
+                    <li class="text-danger" v-for="error in errors" v-bind:key="error">
                       {{ error }}
                     </li>
                   </ul>
@@ -68,6 +62,11 @@
                   />
                 </div>
                 <br />
+                <p>
+                  To login as a test user:
+                  <br />
+                  Email: jeremy@gmail.com / Password: password
+                </p>
                 <button type="submit" class="btn btn-primary margin-top-15">
                   login
                 </button>
@@ -122,15 +121,14 @@ export default {
       };
       axios
         .post("/api/employer/sessions", params)
-        .then((response) => {
-          axios.defaults.headers.common["Authorization"] =
-            "Bearer " + response.data.jwt;
+        .then(response => {
+          axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
           localStorage.setItem("employer_id", response.data.employer_id);
           console.log("employer has logged in");
           this.$router.push(`/employers/${response.data.employer_id}`);
         })
-        .catch((error) => {
+        .catch(error => {
           console.log(error.response);
           this.errors = ["Invalid email or password."];
           this.email = "";
